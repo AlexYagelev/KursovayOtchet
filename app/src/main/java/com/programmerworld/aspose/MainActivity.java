@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -16,15 +17,13 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.aspose.cells.Cell;
-import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
-
-import java.io.OutputStream;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_WRITE_EXTERNAL_STORAGE = 1;
     private static final String FILE_NAME = "output.xlsx";
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
                     == PackageManager.PERMISSION_GRANTED) {
 // Разрешение уже предоставлено, можно создавать файл
                 createExcelFile();
-            } else {
+
+
+
+            }
+            else {
 // Запрос разрешения
                 ActivityCompat.requestPermissions(MainActivity.this,
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
@@ -105,14 +108,14 @@ public class MainActivity extends AppCompatActivity {
                         cell2.setValue(text2);
 
                         // Вставить значение в первую ячейку
-                        Cell firstCell3 = worksheet.getCells().get("E1");
+                     /*   Cell firstCell3 = worksheet.getCells().get("E1");
                         firstCell3.setValue("Предприятие использующее ТПА");
 
                         EditText editText3 = findViewById(R.id.editText4);
                         String text3 = editText3.getText().toString();
 
                         Cell cell3 = worksheet.getCells().get("E2");
-                        cell3.setValue(text3);
+                        cell3.setValue(text3);*/
 
                         // Вставить значение в первую ячейку
                         Cell firstCell4 = worksheet.getCells().get("F1");
@@ -135,25 +138,29 @@ public class MainActivity extends AppCompatActivity {
                         cell5.setValue(text5);
 
 
+
+
+
+
                         // Вставить значение во вторую ячейку
                         /*Cell secondCell = worksheet.getCells().get("B2");
                         secondCell.setValue("Значение во второй ячейке");
 */
 
-                        OutputStream outputStream = getContentResolver().openOutputStream(uri);
+                        /* OutputStream outputStream = getContentResolver().openOutputStream(uri);
                         if (outputStream != null) {
                             workbook.save(outputStream, SaveFormat.XLSX);
                             Toast.makeText(this, "File saved successfully: " + uri.toString(), Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(this, "Failed to save file", Toast.LENGTH_SHORT).show();
-                        }
+                        }*/
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Toast.makeText(this, "Failed to save file: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(this, "Failed to save file: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
-                } else {
+                } /*else {
                     Toast.makeText(this, "Failed to create file", Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
     );
 
@@ -164,4 +171,15 @@ public class MainActivity extends AppCompatActivity {
         intent.setType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
         intent.putExtra(Intent.EXTRA_TITLE, FILE_NAME);
         createFileLauncher.launch(FILE_NAME);
+        spinner = findViewById(R.id.spinner);
+        int selectedItemPosition = spinner.getSelectedItemPosition();
+        if (selectedItemPosition == 0) {
+            // переключаем на другую активность для выбора 1
+            Intent intent1 = new Intent(MainActivity.this, Activity_type_1.class);
+            startActivity(intent1);
+        } else if (selectedItemPosition == 1) {
+            // переключаем на другую активность для выбора 2
+            Intent intent1 = new Intent(MainActivity.this, Activity_type_2.class);
+            startActivity(intent1);
+        }
     }}

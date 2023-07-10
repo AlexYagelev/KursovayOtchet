@@ -254,7 +254,7 @@ save();
     );
 
     private void createExcelFile() {
-        final String FILE_NAME = "file.xlsx";
+        final String FILE_NAME = "example.xlsx";
 
 
         Intent intent_e = new Intent(this, Activity_type_1.class);

@@ -1,4 +1,5 @@
 package com.programmerworld.aspose;
+
 import com.aspose.cells.Cell;
 import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
@@ -63,8 +64,9 @@ public class ExcelDataSaver {
         cell = worksheet.getCells().get("G2");
         cell.setValue(operationDate);
 
+
         // Сохраняем файл Excel
-        String outputDirectory = "/Внутренний общий накопитель/Download"; // Место для сохранения файла
+        String outputDirectory = "/Mi 10/Внутренний общий накопитель/Download"; // Место для сохранения файла
         String outputFile = outputDirectory + "/" + fileName;
         workbook.save(outputFile, SaveFormat.XLSX);
     }

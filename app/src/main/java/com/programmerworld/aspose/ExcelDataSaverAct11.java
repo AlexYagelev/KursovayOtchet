@@ -19,7 +19,7 @@ public class ExcelDataSaverAct11 {
         //File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "example.xlsx");
         // Uri fileUri = Uri.fromFile(file);
 
-        Workbook workbook = new Workbook("/sdcard/Download/example.xlsx");
+        Workbook workbook = new Workbook("/Внутренний общий накопитель/Download/example.xlsx");
         Worksheet worksheet = workbook.getWorksheets().get(0);
 
 

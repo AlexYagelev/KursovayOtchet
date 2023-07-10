@@ -64,7 +64,7 @@ public class ExcelDataSaver {
         cell.setValue(operationDate);
 
         // Сохраняем файл Excel
-        String outputDirectory = "/sdcard/Download"; // Место для сохранения файла
+        String outputDirectory = "/Внутренний общий накопитель/Download"; // Место для сохранения файла
         String outputFile = outputDirectory + "/" + fileName;
         workbook.save(outputFile, SaveFormat.XLSX);
     }

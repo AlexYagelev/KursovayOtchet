@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
-// Разрешение уже предоставлено, можно создавать файл
+// Разрешение уже предоставлено, можно создавать фа
                 // createExcelFile();
 save();
 

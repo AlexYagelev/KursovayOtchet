@@ -265,7 +265,7 @@ save();
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
         intent.putExtra(Intent.EXTRA_TITLE, FILE_NAME);
-        createFileLauncher.launch(FILE_NAME);
+        //createFileLauncher.launch(FILE_NAME);
 
         /*spinner = findViewById(R.id.spinner);
         int selectedItemPosition = spinner.getSelectedItemPosition();

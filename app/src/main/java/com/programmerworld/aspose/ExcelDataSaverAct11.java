@@ -70,7 +70,7 @@ public class ExcelDataSaverAct11 {
         cell.setValue(text6);
 
         // Сохраняем файл Excel
-        String outputDirectory = "/sdcard/Download"; // Место для сохранения файла
+        String outputDirectory = "/storage/emulated/0/Download"; // Место для сохранения файла
         String outputFile = outputDirectory + "/" + fileName;
         workbook.save(outputFile, SaveFormat.XLSX);
     }

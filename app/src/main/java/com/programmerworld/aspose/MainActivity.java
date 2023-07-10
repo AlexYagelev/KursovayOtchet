@@ -17,13 +17,17 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.aspose.cells.Cell;
+import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
+
+import java.io.OutputStream;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_WRITE_EXTERNAL_STORAGE = 1;
     private static final String FILE_NAME = "output.xlsx";
-    private Spinner spinner;
+    private Spinner spinner; private Uri uri;
+    private Workbook workbook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +38,29 @@ public class MainActivity extends AppCompatActivity {
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
 // Разрешение уже предоставлено, можно создавать файл
-                createExcelFile();
+                // createExcelFile();
+save();
+
+
+
+
+
+
+                spinner = findViewById(R.id.spinner);
+                 int selectedItemPosition = spinner.getSelectedItemPosition();
+                if (selectedItemPosition == 0) {
+                    // переключаем на другую активность для выбора 1
+                    Intent intent1 = new Intent(MainActivity.this, Activity_type_1.class);
+                    //intent1.putExtra("uri", uri.toString());
+
+                    startActivity(intent1);
+                } else if (selectedItemPosition == 1) {
+                    // переключаем на другую активность для выбора 2
+                    Intent intent1 = new Intent(MainActivity.this, Activity_type_2.class);
+                    startActivity(intent1);
+                }
+
+
 
 
 
@@ -46,6 +72,70 @@ public class MainActivity extends AppCompatActivity {
                         REQUEST_WRITE_EXTERNAL_STORAGE);
             }
         });
+    }
+
+    private void save(){
+        ExcelDataSaver dataSaver = new ExcelDataSaver("example.xlsx");
+        try {
+
+
+
+            EditText editText1 = findViewById(R.id.editText2);
+            String text1 = editText1.getText().toString();
+
+
+
+
+            // Вставить значение в первую ячейку
+
+
+            EditText editText = findViewById(R.id.editText_1);
+            String text = editText.getText().toString();
+
+
+
+            EditText editText2 = findViewById(R.id.editText3);
+            String text2 = editText2.getText().toString();
+
+
+
+
+            EditText editText3 = findViewById(R.id.editText5);
+                    String text3 = editText3.getText().toString();
+
+
+
+
+
+                        EditText editText4 = findViewById(R.id.editText6);
+                        String text4 = editText4.getText().toString();
+
+
+
+
+
+                        EditText editText5 = findViewById(R.id.editText7);
+                        String text5 = editText5.getText().toString();
+
+
+
+
+
+
+
+
+
+
+
+
+
+            dataSaver.saveData(text, text1, text2,text3, text4, text5);
+            Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Ошибка при сохранении данных", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override
@@ -67,9 +157,10 @@ public class MainActivity extends AppCompatActivity {
             new ActivityResultContracts.CreateDocument(),
             result -> {
                 if (result != null) {
-                    Uri uri = result;
+                    uri = result;
+
                     try {
-                        Workbook workbook = new Workbook();
+                         workbook = new Workbook();
                         Worksheet worksheet = workbook.getWorksheets().get(0);
                         /* Cells cells = worksheet.getCells();
                         Cell cell = cells.get("Б1");
@@ -91,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                         Cell firstCell = worksheet.getCells().get("C1");
                         firstCell.setValue("заводской номер");
 
-                        EditText editText = findViewById(R.id.editText);
+                        EditText editText = findViewById(R.id.editText_1);
                         String text = editText.getText().toString();
 
                         Cell cell = worksheet.getCells().get("C2");
@@ -108,17 +199,15 @@ public class MainActivity extends AppCompatActivity {
                         cell2.setValue(text2);
 
                         // Вставить значение в первую ячейку
-                     /*   Cell firstCell3 = worksheet.getCells().get("E1");
-                        firstCell3.setValue("Предприятие использующее ТПА");
+                     /*
 
                         EditText editText3 = findViewById(R.id.editText4);
                         String text3 = editText3.getText().toString();
 
-                        Cell cell3 = worksheet.getCells().get("E2");
-                        cell3.setValue(text3);*/
+
 
                         // Вставить значение в первую ячейку
-                        Cell firstCell4 = worksheet.getCells().get("F1");
+                     /*   Cell firstCell4 = worksheet.getCells().get("F1");
                         firstCell4.setValue("Место эксплуатирования");
 
                         EditText editText4 = findViewById(R.id.editText5);
@@ -137,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
                         Cell cell5 = worksheet.getCells().get("G2");
                         cell5.setValue(text5);
 
-
+*/
 
 
 
@@ -147,16 +236,16 @@ public class MainActivity extends AppCompatActivity {
                         secondCell.setValue("Значение во второй ячейке");
 */
 
-                        /* OutputStream outputStream = getContentResolver().openOutputStream(uri);
+                         OutputStream outputStream = getContentResolver().openOutputStream(uri);
                         if (outputStream != null) {
                             workbook.save(outputStream, SaveFormat.XLSX);
                             Toast.makeText(this, "File saved successfully: " + uri.toString(), Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(this, "Failed to save file", Toast.LENGTH_SHORT).show();
-                        }*/
+                        }
                     } catch (Exception e) {
                         e.printStackTrace();
-                        //Toast.makeText(this, "Failed to save file: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Failed to save file: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } /*else {
                     Toast.makeText(this, "Failed to create file", Toast.LENGTH_SHORT).show();
@@ -165,21 +254,30 @@ public class MainActivity extends AppCompatActivity {
     );
 
     private void createExcelFile() {
-        final String FILE_NAME = "output.xlsx";
+        final String FILE_NAME = "file.xlsx";
+
+
+        Intent intent_e = new Intent(this, Activity_type_1.class);
+
+        
+        
         Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
         intent.putExtra(Intent.EXTRA_TITLE, FILE_NAME);
         createFileLauncher.launch(FILE_NAME);
-        spinner = findViewById(R.id.spinner);
+
+        /*spinner = findViewById(R.id.spinner);
         int selectedItemPosition = spinner.getSelectedItemPosition();
         if (selectedItemPosition == 0) {
             // переключаем на другую активность для выбора 1
             Intent intent1 = new Intent(MainActivity.this, Activity_type_1.class);
+           //intent1.putExtra("uri", uri.toString());
+
             startActivity(intent1);
         } else if (selectedItemPosition == 1) {
             // переключаем на другую активность для выбора 2
             Intent intent1 = new Intent(MainActivity.this, Activity_type_2.class);
             startActivity(intent1);
-        }
+        }*/
     }}

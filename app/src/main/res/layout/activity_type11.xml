@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_type_1"
+    tools:context=".Activity_type_1_1"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-59dp">
 
     <EditText
-        android:id="@+id/editText_1"
+        android:id="@+id/editText_11"
         android:layout_width="190dp"
         android:layout_height="52dp"
         android:layout_marginEnd="60dp"
@@ -21,7 +21,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText_2"
+        android:id="@+id/editText_21"
         android:layout_width="190dp"
         android:layout_height="52dp"
         android:layout_marginEnd="60dp"
@@ -33,7 +33,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText_3"
+        android:id="@+id/editText_31"
         android:layout_width="190dp"
         android:layout_height="52dp"
         android:layout_marginEnd="68dp"
@@ -45,7 +45,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText_4"
+        android:id="@+id/editText_41"
         android:layout_width="190dp"
         android:layout_height="52dp"
         android:layout_marginEnd="60dp"
@@ -58,7 +58,7 @@
         app:layout_constraintVertical_bias="0.519" />
 
     <EditText
-        android:id="@+id/editText_5"
+        android:id="@+id/editText_51"
         android:layout_width="190dp"
         android:layout_height="52dp"
         android:layout_marginEnd="60dp"
@@ -72,7 +72,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText_6"
+        android:id="@+id/editText_61"
         android:layout_width="190dp"
         android:layout_height="52dp"
         android:layout_marginEnd="64dp"
@@ -84,20 +84,20 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView81"
         android:layout_width="78dp"
         android:layout_height="55dp"
         android:gravity="center"
-        android:text="Номинальный диаметр"
+        android:text="Гидравлические характеристики"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText_1"
+        app:layout_constraintEnd_toStartOf="@+id/editText_11"
         app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.149" />
 
     <Button
-        android:id="@+id/b1"
+        android:id="@+id/b2"
         android:layout_width="121dp"
         android:layout_height="59dp"
         android:layout_marginBottom="32dp"
@@ -121,7 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="2.1 Основные технические данные"
+            android:text="2.2 Основные технические данные"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
@@ -134,11 +134,11 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:text="Номинальное давление"
-        app:layout_constraintEnd_toStartOf="@+id/editText_2"
+        android:text="Стойкостть к вн. воздействиям"
+        app:layout_constraintEnd_toStartOf="@+id/editText_21"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView81" />
 
     <TextView
         android:id="@+id/textView11"
@@ -147,8 +147,8 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Температура рабочей среды"
-        app:layout_constraintEnd_toStartOf="@+id/editText_3"
+        android:text=" Климатическое исполнение"
+        app:layout_constraintEnd_toStartOf="@+id/editText_31"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -160,7 +160,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Рабочая среда"
+        android:text="Показатели надежности безопасности"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -171,7 +171,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="Герметичность затвора"
+        android:text="Вид привода"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -182,23 +182,22 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:text="Тип присоединения"
-        app:layout_constraintEnd_toStartOf="@+id/editText_6"
+        android:text="Масса"
+        app:layout_constraintEnd_toStartOf="@+id/editText_61"
         app:layout_constraintHorizontal_bias="0.207"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button4"
         android:layout_width="121dp"
         android:layout_height="59dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"
-        android:background="#D10A0A"
+        android:layout_marginBottom="36dp"
+        android:background="#DF2323"
         android:text="Вернуться назад"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/b1"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/b2"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

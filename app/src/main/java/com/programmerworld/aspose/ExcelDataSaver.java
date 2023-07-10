@@ -66,7 +66,7 @@ public class ExcelDataSaver {
 
 
         // Сохраняем файл Excel
-        String outputDirectory = "Внутренний общий накопитель/Download/"; // Место для сохранения файла
+        String outputDirectory = "/storage/emulated/0/Download"; // Место для сохранения файла
         String outputFile = outputDirectory + "/" + fileName;
         workbook.save(outputFile, SaveFormat.XLSX);
     }

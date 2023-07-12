@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -22,6 +24,8 @@ import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
 
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_WRITE_EXTERNAL_STORAGE = 1;
@@ -40,9 +44,6 @@ public class MainActivity extends AppCompatActivity {
 // Разрешение уже предоставлено, можно создавать фа
                 // createExcelFile();
 save();
-
-
-
 
 
 
@@ -72,6 +73,36 @@ save();
                         REQUEST_WRITE_EXTERNAL_STORAGE);
             }
         });
+    }
+
+    private void clip() throws Exception {
+
+        // Получить путь к файлу Excel
+        String filePath = "/sdcard/Download/Книга1.xlsx";
+
+// Создать объект Workbook из файла Excel
+        Workbook workbook = new Workbook(filePath);
+
+// Получить лист с данными
+        Worksheet worksheet = workbook.getWorksheets().get(0);
+
+// Создать список строк для автодополнения
+        List<String> autocompleteList = new ArrayList<>();
+
+// Пройти по всем строкам и добавить название фильма в список
+        for (int row = 1; row <= worksheet.getCells().getMaxDataRow(); row++) {
+            Cell cell = worksheet.getCells().get(row, 0);
+            String filmName = cell.getStringValue();
+            autocompleteList.add(filmName);
+        }
+
+        // Создать адаптер для AutoCompleteTextView
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, autocompleteList);
+
+// Установить адаптер для AutoCompleteTextView
+        AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+        autoCompleteTextView.setAdapter(adapter);
     }
 
     private void save(){

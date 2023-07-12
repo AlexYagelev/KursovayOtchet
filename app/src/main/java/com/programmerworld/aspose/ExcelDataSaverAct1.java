@@ -18,7 +18,7 @@ public class ExcelDataSaverAct1 {
         //File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "example.xlsx");
        // Uri fileUri = Uri.fromFile(file);
 
-        Workbook workbook = new Workbook("/storage/emulated/0/Download/example.xlsx");
+        Workbook workbook = new Workbook("/sdcard/Download/example.xlsx");
         Worksheet worksheet = workbook.getWorksheets().get(0);
 
 
@@ -69,7 +69,7 @@ public class ExcelDataSaverAct1 {
         cell.setValue(text6);
 
         // Сохраняем файл Excel
-        String outputDirectory = "/storage/emulated/0/Download"; // Место для сохранения файла
+        String outputDirectory = "/sdcard/Download"; // Место для сохранения файла
         String outputFile = outputDirectory + "/" + fileName;
         workbook.save(outputFile, SaveFormat.XLSX);
     }

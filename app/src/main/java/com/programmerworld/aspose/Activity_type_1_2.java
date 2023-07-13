@@ -1,10 +1,12 @@
 package com.programmerworld.aspose;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +34,12 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
     private List<String> dataValues = new ArrayList<>();
     private AutoCompleteTextView autoCompleteTextView;
     private Spinner spinner;
+    private Spinner spinner6;
+    private Button button2;
     private Spinner spinner2;
+    private Spinner spinner3;
+    private Spinner spinner4;
+    private Spinner spinner5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +49,136 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         }
       */  try {
             clip();
+
+
+
+
+            spinner = findViewById(R.id.spinner8);    spinner2 = findViewById(R.id.spinner2);
+
+
+
             clip3();
-             clip4();
+            spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    // Делаем второй спиннер недоступным, если выбрано первое значение в первом спиннере
+                    spinner2.setEnabled(position != 0);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                }
+            });
+            clip4();
+            clip5();
+            clip6();
+            clip7();
+          clip8();
+            Button button = findViewById(R.id.button);
+            Spinner spinner1 = findViewById(R.id.spinner);
+            Spinner spinner2 = findViewById(R.id.spinner2);
+            Spinner spinner3 = findViewById(R.id.spinner3);
+            Spinner spinner4 = findViewById(R.id.spinner4);
+            Spinner spinner5 = findViewById(R.id.spinner5);
+            spinner6 = findViewById(R.id.spinner6);
+            button2 = findViewById(R.id.button2);
+
+// Создаем ArrayAdapter с помощью массива строк и стандартного внешнего вида
+
+
+
+// Проверяем значения всех пяти спинеров при создании активности
+            /*     if (spinner1.getSelectedItemPosition() == 0 ||
+                    spinner2.getSelectedItemPosition() == 0 ||
+                    spinner3.getSelectedItemPosition() == 0 ||
+                    spinner4.getSelectedItemPosition() == 0 ||
+                    spinner5.getSelectedItemPosition() == 0) {
+                // Если хотя бы одно значение является первым значением, делаем кнопку невидимой
+                button.setVisibility(View.INVISIBLE);
+            } else {
+                // Если все значения выбраны, делаем кнопку видимой
+                button.setVisibility(View.VISIBLE);
+            }
+
+// Устанавливаем слушатель клика на кнопку
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Проверяем, что хотя бы у одного из спинеров выбрано первое значение
+                    if (spinner1.getSelectedItemPosition() == 0 ||
+                            spinner2.getSelectedItemPosition() == 0 ||
+                            spinner3.getSelectedItemPosition() == 0 ||
+                            spinner4.getSelectedItemPosition() == 0 ||
+                            spinner5.getSelectedItemPosition() == 0) {
+                        // Если да, выводим сообщение о незаполненных полях
+                        Toast.makeText(Activity_type_1_2.this, "Не все поля заполнены", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Если нет, осуществляем переход на другую активность
+                        Intent intent = new Intent(Activity_type_1_2.this, Activity_type_2.class);
+                        startActivity(intent);
+                    }
+                }
+            });
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+        /*    Spinner spinner33 = findViewById(R.id.spinner8);
+              spinner33.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                  @Override
+                  public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                      if (position == 0) {
+                          spinner2.setEnabled(false);
+                      } else {
+                          spinner2.setEnabled(true);
+                          try {
+                              clip4(); // вызываем метод, который может выбросить исключение
+                          } catch (Exception e) {
+                              e.printStackTrace(); // обрабатываем исключение
+                          }
+                      }
+                  }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                    // не используется
+                }
+            });if (spinner.getSelectedItemPosition() == 0) {
+                spinner2.setEnabled(false);
+            } else {
+                spinner2.setEnabled(true);
+                try {
+                    clip4(); // вызываем метод, который может выбросить исключение
+                } catch (Exception e) {
+                    e.printStackTrace(); // обрабатываем исключение
+                }
+            }
+
+            /*spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    String selectedItem = (String) parent.getSelectedItem();
+                    if (selectedItem.trim().equals(" ")) {
+                        spinner2.setEnabled(false);
+                    } else {
+                        spinner2.setEnabled(true);
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                    // не используется
+                }
+            });*/
 
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -74,21 +209,38 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
     // Добавляем обработчик выбора элемента для autoCompleteTextView
     List<List<String>> finalData = data;
+
+
+
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             // Получаем выбранный текст
             String selectedText = autoCompleteTextView.getText().toString();
+            List<String> filtered = new ArrayList<>();
+            List<String> filtered1= new ArrayList<>();filtered1.add("");
 
             // Фильтруем данные из Excel
-            List<String> filtered1 = filterByText(finalData, selectedText);
-            List<String> filtered = filtered1.stream().distinct().collect(Collectors.toList());
+             filtered1 = filterByText(finalData, selectedText);
+             filtered = filtered1.stream().distinct().collect(Collectors.toList());
 
 
             // Устанавливаем отфильтрованные данные в spinner
             setDataToSpinner(filtered);
         }
-    });}
+
+    });
+        spinner2.setEnabled(spinner.getSelectedItemPosition() != 0);
+
+// Устанавливаем слушатель выбора элементов для первого спиннера
+
+
+
+    }
+
+
+
+
 
 
     private void clip4() throws Exception {
@@ -107,15 +259,37 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
         // Добавляем обработчик выбора элемента для autoCompleteTextView
         List<List<String>> finalData1 = data1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
         @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // Получаем выбранный текст
+
+
+
+
                 String selectedText = spinner.getSelectedItem().toString();
+
+
+
                 System.out.println(selectedText);
                 // Фильтруем данные из Excel
                 List<String> filtered1 = filterByText2(finalData1, selectedText);
                 List<String> filtered = filtered1.stream().distinct().collect(Collectors.toList());
+
 
 
                 // Устанавливаем отфильтрованные данные в spinner
@@ -127,6 +301,255 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
             }
         });}
 
+
+    private void clip5() throws Exception {
+
+        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+
+        spinner3 = findViewById(R.id.spinner3);
+        spinner2 = findViewById(R.id.spinner2);
+        spinner = findViewById(R.id.spinner8);
+        // Загружаем данные из Excel файла
+        List<List<String>> data1 = null;
+        try {
+            data1 = loadDataFromExcel3();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        // Добавляем обработчик выбора элемента для autoCompleteTextView
+        List<List<String>> finalData1 = data1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Получаем выбранный текст
+
+
+                String selectedText1 = spinner.getSelectedItem().toString();
+
+
+
+
+                // Фильтруем данные из Excel
+                List<String> filtered12 = filterByText2(finalData1, selectedText1);
+
+
+                String selectedText = spinner2.getSelectedItem().toString();
+
+
+
+                System.out.println(selectedText);
+                // Фильтруем данные из Excel
+                List<String> filtered1 = filterByText3(finalData1, selectedText,selectedText1);
+                List<String> filtered = filtered1.stream().distinct().collect(Collectors.toList());
+
+
+
+                // Устанавливаем отфильтрованные данные в spinner
+                setDataToSpinner3(filtered);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Обработчик, вызываемый если ни один элемент не выбран
+            }
+        });}
+
+    private void clip6() throws Exception {
+
+        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+         spinner4 = findViewById(R.id.spinner4);
+        spinner3 = findViewById(R.id.spinner3);
+        spinner2 = findViewById(R.id.spinner2);
+        // Загружаем данные из Excel файла
+        List<List<String>> data1 = null;
+        try {
+            data1 = loadDataFromExcel3();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        // Добавляем обработчик выбора элемента для autoCompleteTextView
+        List<List<String>> finalData1 = data1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Получаем выбранный текст
+
+
+
+
+                String selectedText = spinner3.getSelectedItem().toString();
+                String selectedText1 = spinner2.getSelectedItem().toString();
+
+
+
+                System.out.println(selectedText);
+                // Фильтруем данные из Excel
+                List<String> filtered1 = filterByText4(finalData1, selectedText,selectedText1 );
+                List<String> filtered = filtered1.stream().distinct().collect(Collectors.toList());
+
+
+
+                // Устанавливаем отфильтрованные данные в spinner
+                setDataToSpinner4(filtered);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Обработчик, вызываемый если ни один элемент не выбран
+            }
+        });}
+
+
+    private void clip7() throws Exception {
+
+        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+        spinner5= findViewById(R.id.spinner5);
+        spinner4 = findViewById(R.id.spinner4);
+        spinner3 = findViewById(R.id.spinner3);
+        spinner2 = findViewById(R.id.spinner2);
+        // Загружаем данные из Excel файла
+        List<List<String>> data1 = null;
+        try {
+            data1 = loadDataFromExcel3();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        // Добавляем обработчик выбора элемента для autoCompleteTextView
+        List<List<String>> finalData1 = data1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Получаем выбранный текст
+
+
+
+                String selectedText1 = spinner3.getSelectedItem().toString();
+                String selectedText = spinner4.getSelectedItem().toString();
+
+
+
+                System.out.println(selectedText);
+                // Фильтруем данные из Excel
+                List<String> filtered1 = filterByText5(finalData1, selectedText,selectedText1);
+                List<String> filtered = filtered1.stream().distinct().collect(Collectors.toList());
+
+
+
+                // Устанавливаем отфильтрованные данные в spinner
+                setDataToSpinner5(filtered);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Обработчик, вызываемый если ни один элемент не выбран
+            }
+        });}
+
+
+
+
+
+
+    private void clip8() throws Exception {
+
+        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+        spinner5= findViewById(R.id.spinner5);
+        spinner6= findViewById(R.id.spinner6);
+        spinner4 = findViewById(R.id.spinner4);
+        spinner3 = findViewById(R.id.spinner3);
+        spinner2 = findViewById(R.id.spinner2);
+        // Загружаем данные из Excel файла
+        List<List<String>> data1 = null;
+        try {
+            data1 = loadDataFromExcel3();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        // Добавляем обработчик выбора элемента для autoCompleteTextView
+        List<List<String>> finalData1 = data1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        spinner5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Получаем выбранный текст
+
+
+
+                String selectedText1 = spinner4.getSelectedItem().toString();
+                String selectedText = spinner5.getSelectedItem().toString();
+
+
+
+                System.out.println(selectedText);
+                // Фильтруем данные из Excel
+                List<String> filtered1 = filterByText6(finalData1, selectedText,selectedText1);
+                List<String> filtered = filtered1.stream().distinct().collect(Collectors.toList());
+
+
+
+                // Устанавливаем отфильтрованные данные в spinner
+                setDataToSpinner6(filtered);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Обработчик, вызываемый если ни один элемент не выбран
+            }
+        });}
 
 
 
@@ -192,8 +615,50 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         return data;
     }
 
+    private List<List<String>> loadDataFromExcel3() throws Exception {
+        // Загрузка данных из Excel с помощью Aspose.Cells
+
+        Workbook workbook = new Workbook("/sdcard/Download/Книга1.xlsx");
+
+        // Получаем первый лист
+        Worksheet worksheet = workbook.getWorksheets().get(0);
+
+        // Создадим список для данных
+        List<List<String>> data = new ArrayList<>();
+
+        // Проходим по всем строкам
+        for (int rowIndex = 0; rowIndex < worksheet.getCells().getMaxDataRow()+1; rowIndex++) {
+            // Данные из одной строки
+            List<String> rowData = new ArrayList<>();
+
+            // Проходим по всем ячейкам в строке
+            for (int colIndex = 0; colIndex < worksheet.getCells().getMaxDataColumn()+1; colIndex++) {
+                Cell cell = worksheet.getCells().get(rowIndex, colIndex);
+
+                // Добавляем данные ячейки в список строки
+                rowData.add(cell.getStringValue());
+            }
+
+            // Добавляем список данных строки в общий список
+            data.add(rowData);
+        }
+
+        return data;
+    }
+
     private List<String> filterByText(List<List<String>> data, String text) {
         List<String> filtered1 = new ArrayList<>();
+        //filtered1.add(" ");
+
+        int firstNonSpaceIndex = text.trim().indexOf(' ');
+
+        if (firstNonSpaceIndex != -1) {
+            String newString = text.substring(firstNonSpaceIndex).trim();
+            // newString = "Hello world!"
+        } else {
+            String newString = text.trim();
+            // newString = "Hello world!"
+        }
         for(List<String> row : data) {
             if(row.get(0).contains(text)) {
                 filtered1.add(row.get(1));
@@ -204,21 +669,150 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
     private List<String> filterByText2(List<List<String>> data, String text) {
         List<String> filtered1 = new ArrayList<>();
+       // filtered1.add(" ");
+
+
+
         for(List<String> row : data) {
             if(row.get(1).contains(text)) {
                 filtered1.add(row.get(6));
             }
+
         }
         return filtered1;
     }
 
+    private List<String> filterByText3(List<List<String>> data, String text,String text1) {
+        List<String> filtered1 = new ArrayList<>();
+        // filtered1.add(" ");
+
+
+
+        for(List<String> row : data) {
+            if(row.get(6).contains(text) && row.get(1).contains(text1) ) {
+                filtered1.add(row.get(8));
+            }
+
+        }
+        return filtered1;
+    }
+    private List<String> filterByText4(List<List<String>> data, String text,String text1) {
+        List<String> filtered1 = new ArrayList<>();
+        // filtered1.add(" ");
+
+
+
+        for(List<String> row : data) {
+            if(row.get(8).contains(text) && row.get(6).contains(text1) ) {
+                filtered1.add(row.get(9));
+            }
+
+        }
+        return filtered1;
+    }
+
+
+    private List<String> filterByText5(List<List<String>> data, String text,String text1) {
+        List<String> filtered1 = new ArrayList<>();
+        // filtered1.add(" ");
+
+
+
+        for(List<String> row : data) {
+            if(row.get(9).contains(text) && row.get(8).contains(text1)) {
+                filtered1.add(row.get(10));
+            }
+
+        }
+        return filtered1;
+    }
+
+    private List<String> filterByText6(List<List<String>> data, String text,String text1) {
+        List<String> filtered1 = new ArrayList<>();
+        // filtered1.add(" ");
+
+
+
+        for(List<String> row : data) {
+            if(row.get(10).contains(text) && row.get(9).contains(text1)) {
+                filtered1.add(row.get(13));
+            }
+
+        }
+        return filtered1;
+    }
+
+
     private void setDataToSpinner(List<String> data) {
+        data.add(0,"Сделайте выбор:");
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
+
         spinner.setAdapter(adapter);
     }
      private void setDataToSpinnerSecond(List<String> data) {
+         data.add(0,"Сделайте выбор:");
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
         spinner2.setAdapter(adapter2);
+    }
+    private void setDataToSpinner3(List<String> data) {
+        data.add(0,"Сделайте выбор:");
+        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
+
+        spinner3.setAdapter(adapter3);
+    }
+    private void setDataToSpinner4(List<String> data) {
+        data.add(0,"Сделайте выбор:");
+        ArrayAdapter<String> adapter4 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
+
+        spinner4.setAdapter(adapter4);
+    }
+
+    private void setDataToSpinner5(List<String> data) {
+        data.add(0,"Сделайте выбор:");
+        ArrayAdapter<String> adapter4 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
+
+        spinner5.setAdapter(adapter4);
+    }
+
+    private void setDataToSpinner6(List<String> data) {
+        data.add(0,"Сделайте выбор:");
+        ArrayAdapter<String> adapter5 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
+
+        spinner6.setAdapter(adapter5);
+
+
+
+
+
+
+
+// Устанавливаем обработчик события выбора элемента в Spinner
+        spinner6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+// Если выбран не первый элемент, то разблокируем кнопку
+                if (position != 0) {
+                    button2.setEnabled(true);
+                } else {
+                    button2.setEnabled(false);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+// Ничего не делаем
+            }
+        });
+
+// Устанавливаем обработчик нажатия на кнопку
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+// Получаем выбранный элемент в Spinner
+                Intent intent = new Intent(Activity_type_1_2.this, Activity_type_2.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -293,7 +887,8 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
 // Создать список строк для автодополнения
         List<String> autocompleteList1 = new ArrayList<>();
-
+        List<String> autocompleteList= new ArrayList<>();
+        autocompleteList.add("");
 
 // Пройти по всем строкам и добавить название фильма в список
         for (int row = 1; row <= worksheet.getCells().getMaxDataRow(); row++) {
@@ -301,7 +896,7 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
             String filmName = cell.getStringValue();
             autocompleteList1.add(filmName);
         }
-        List<String> autocompleteList = autocompleteList1.stream().distinct().collect(Collectors.toList());
+        autocompleteList = autocompleteList1.stream().distinct().collect(Collectors.toList());
 
         // Создать адаптер для AutoCompleteTextView
         ArrayAdapter<String> adapter =
@@ -312,7 +907,7 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         autoCompleteTextView.setAdapter(adapter);
 
 
-
+//clip3();
     }
      private void clip2() throws Exception {List<String> secondListValues = new ArrayList<>();
 

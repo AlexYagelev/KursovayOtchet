@@ -26,7 +26,7 @@ public class Activity_type_1_1 extends AppCompatActivity {
             if (ContextCompat.checkSelfPermission(Activity_type_1_1.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
                 save_1();
-                Intent intent1 = new Intent(Activity_type_1_1.this, Activity_type_1_2.class);
+                Intent intent1 = new Intent(Activity_type_1_1.this, Activity_type_2.class);
                 //intent1.putExtra("uri", uri.toString());
 
                 startActivity(intent1);

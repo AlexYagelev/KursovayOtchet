@@ -8,6 +8,21 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-59dp">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="125dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.956"
+        app:srcCompat="@drawable/gd"
+        tools:ignore="MissingConstraints" />
+
     <EditText
         android:id="@+id/editText_11"
         android:layout_width="190dp"
@@ -100,11 +115,11 @@
         android:id="@+id/b2"
         android:layout_width="121dp"
         android:layout_height="59dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="88dp"
         android:background="#0B4A8E"
         android:text="Вперед"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_61" />
 
@@ -112,7 +127,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#0B4A8E"
+        android:background="#0079C2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -196,7 +211,7 @@
         android:text="Вернуться назад"
         app:layout_constraintBottom_toBottomOf="@+id/b2"
         app:layout_constraintEnd_toStartOf="@+id/b2"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_61"
         app:layout_constraintVertical_bias="1.0" />

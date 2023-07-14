@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,11 +36,14 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
     private AutoCompleteTextView autoCompleteTextView;
     private Spinner spinner;
     private Spinner spinner6;
+
     private Button button2;
     private Spinner spinner2;
     private Spinner spinner3;
+    private Spinner spinner33;
     private Spinner spinner4;
     private Spinner spinner5;
+    String ST;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,14 +78,12 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
             clip6();
             clip7();
           clip8();
-            Button button = findViewById(R.id.button);
-            Spinner spinner1 = findViewById(R.id.spinner);
-            Spinner spinner2 = findViewById(R.id.spinner2);
-            Spinner spinner3 = findViewById(R.id.spinner3);
-            Spinner spinner4 = findViewById(R.id.spinner4);
-            Spinner spinner5 = findViewById(R.id.spinner5);
-            spinner6 = findViewById(R.id.spinner6);
-            button2 = findViewById(R.id.button2);
+
+
+
+
+
+// Устанавливаем слушатель выбора элементов для первого спиннера
 
 // Создаем ArrayAdapter с помощью массива строк и стандартного внешнего вида
 
@@ -218,8 +220,9 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
             // Получаем выбранный текст
             String selectedText = autoCompleteTextView.getText().toString();
             List<String> filtered = new ArrayList<>();
-            List<String> filtered1= new ArrayList<>();filtered1.add("");
-
+            List<String> filtered1= new ArrayList<>();//filtered1.add("");
+            AutoCompleteTextView autoCompleteTextView1 = findViewById(R.id.autoCompleteTextView);
+            ST =autoCompleteTextView1.getText().toString();
             // Фильтруем данные из Excel
              filtered1 = filterByText(finalData, selectedText);
              filtered = filtered1.stream().distinct().collect(Collectors.toList());
@@ -231,8 +234,6 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
     });
         spinner2.setEnabled(spinner.getSelectedItemPosition() != 0);
-
-// Устанавливаем слушатель выбора элементов для первого спиннера
 
 
 
@@ -285,9 +286,12 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
 
 
+
+            AutoCompleteTextView autoCompleteTextView1 = findViewById(R.id.autoCompleteTextView);
+            ST =autoCompleteTextView1.getText().toString();
                 System.out.println(selectedText);
                 // Фильтруем данные из Excel
-                List<String> filtered1 = filterByText2(finalData1, selectedText);
+                List<String> filtered1 = filterByText2(finalData1, selectedText, ST);
                 List<String> filtered = filtered1.stream().distinct().collect(Collectors.toList());
 
 
@@ -339,12 +343,13 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
 
                 String selectedText1 = spinner.getSelectedItem().toString();
+                String selectedText2 = spinner2.getSelectedItem().toString();
 
 
 
 
                 // Фильтруем данные из Excel
-                List<String> filtered12 = filterByText2(finalData1, selectedText1);
+               // List<String> filtered12 = filterByText3(finalData1, selectedText1);
 
 
                 String selectedText = spinner2.getSelectedItem().toString();
@@ -535,7 +540,7 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
 
 
-                System.out.println(selectedText);
+
                 // Фильтруем данные из Excel
                 List<String> filtered1 = filterByText6(finalData1, selectedText,selectedText1);
                 List<String> filtered = filtered1.stream().distinct().collect(Collectors.toList());
@@ -650,15 +655,7 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         List<String> filtered1 = new ArrayList<>();
         //filtered1.add(" ");
 
-        int firstNonSpaceIndex = text.trim().indexOf(' ');
 
-        if (firstNonSpaceIndex != -1) {
-            String newString = text.substring(firstNonSpaceIndex).trim();
-            // newString = "Hello world!"
-        } else {
-            String newString = text.trim();
-            // newString = "Hello world!"
-        }
         for(List<String> row : data) {
             if(row.get(0).contains(text)) {
                 filtered1.add(row.get(1));
@@ -667,14 +664,14 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         return filtered1;
     }
 
-    private List<String> filterByText2(List<List<String>> data, String text) {
+    private List<String> filterByText2(List<List<String>> data, String text, String text1) {
         List<String> filtered1 = new ArrayList<>();
        // filtered1.add(" ");
 
 
 
         for(List<String> row : data) {
-            if(row.get(1).contains(text)) {
+            if(row.get(1).contains(text)&&row.get(0).contains(text1)) {
                 filtered1.add(row.get(6));
             }
 
@@ -785,9 +782,9 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
 
 
-
+        button2 = findViewById(R.id.button2);
 // Устанавливаем обработчик события выбора элемента в Spinner
-        spinner6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+       spinner6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 // Если выбран не первый элемент, то разблокируем кнопку
@@ -805,12 +802,20 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         });
 
 // Устанавливаем обработчик нажатия на кнопку
-        button2.setOnClickListener(new View.OnClickListener() {
+     button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 // Получаем выбранный элемент в Spinner
-                Intent intent = new Intent(Activity_type_1_2.this, Activity_type_2.class);
-                startActivity(intent);
+
+                 spinner33 = findViewById(R.id.spinner3);
+                String selectedText = spinner33.getSelectedItem().toString();
+                if (selectedText.equals("Обследование сосудов и аппаратов")) {
+                    Intent intent = new Intent(Activity_type_1_2.this, Activity_type_2.class);
+                    startActivity(intent);
+                } else if (selectedText.equals("Обследование ТПА")) {
+                   Intent intent = new Intent(Activity_type_1_2.this, MainActivity.class);
+                   startActivity(intent);
+                }
             }
         });
     }
@@ -890,6 +895,10 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         List<String> autocompleteList= new ArrayList<>();
         autocompleteList.add("");
 
+
+
+
+
 // Пройти по всем строкам и добавить название фильма в список
         for (int row = 1; row <= worksheet.getCells().getMaxDataRow(); row++) {
             Cell cell = worksheet.getCells().get(row, 0);
@@ -903,8 +912,9 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
                 new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, autocompleteList);
 
 // Установить адаптер для AutoCompleteTextView
-        AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
-        autoCompleteTextView.setAdapter(adapter);
+        AutoCompleteTextView autoCompleteTextView1 = findViewById(R.id.autoCompleteTextView);
+        ST =autoCompleteTextView1.getText().toString();
+        autoCompleteTextView1.setAdapter(adapter);
 
 
 //clip3();
@@ -977,5 +987,56 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         Spinner secondListSpinner = findViewById(R.id.spinner8);
         secondListSpinner.setAdapter(adapter);
     }*/
+
+    private void save1(){
+        ExcelDataSaverAct111 dataSaver1 = new ExcelDataSaverAct111("example.xlsx");
+        try {
+
+
+
+             autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+            String s1 = autoCompleteTextView.getText().toString();
+
+             spinner = findViewById(R.id.spinner8);
+            String s2 = spinner.getSelectedItem().toString();
+
+             spinner2 = findViewById(R.id.spinner2);
+            String s3 = spinner2.getSelectedItem().toString();
+
+             spinner3 = findViewById(R.id.spinner3);
+            String s4 = spinner3.getSelectedItem().toString();
+
+             spinner4 = findViewById(R.id.spinner4);
+            String s5 = spinner4.getSelectedItem().toString();
+
+             spinner5 = findViewById(R.id.spinner5);
+            String s6 = spinner5.getSelectedItem().toString();
+
+             spinner6 = findViewById(R.id.spinner6);
+            String s7 = spinner6.getSelectedItem().toString();
+
+
+
+
+            // Вставить значение в первую ячейку
+
+
+
+
+
+
+
+
+
+
+
+            dataSaver1.saveData1(s1, s2, s3,s4, s5, s6, s7);
+            Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Ошибка при сохранении данных", Toast.LENGTH_SHORT).show();
+        }
+
+    }
 }
 

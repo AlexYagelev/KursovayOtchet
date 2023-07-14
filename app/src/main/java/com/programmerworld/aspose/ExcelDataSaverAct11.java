@@ -24,22 +24,22 @@ public class ExcelDataSaverAct11 {
 
 
 
-        Cell cell = worksheet.getCells().get("N1");
+        Cell cell = worksheet.getCells().get("T1");
         cell.setValue("Гидравлические характеристики");
 
-        cell = worksheet.getCells().get("O1");
+        cell = worksheet.getCells().get("U1");
         cell.setValue("Стойкость к внешним воздействиям");
 
-        cell = worksheet.getCells().get("P1");
+        cell = worksheet.getCells().get("V1");
         cell.setValue("Климатическое исполнение");
 
-        cell = worksheet.getCells().get("Q1");
+        cell = worksheet.getCells().get("W1");
         cell.setValue("Показатели надежности безопасности");
 
-        cell = worksheet.getCells().get("R1");
+        cell = worksheet.getCells().get("X1");
         cell.setValue("Вид привода");
 
-        cell = worksheet.getCells().get("S1");
+        cell = worksheet.getCells().get("Y1");
         cell.setValue("Масса");
 
 
@@ -51,22 +51,22 @@ public class ExcelDataSaverAct11 {
         // Заполняем таблицу данными
 
 
-        cell = worksheet.getCells().get("N2");
+        cell = worksheet.getCells().get("T2");
         cell.setValue(TypeWork);
 
-        cell = worksheet.getCells().get("O2");
+        cell = worksheet.getCells().get("U2");
         cell.setValue(text2);
 
-        cell = worksheet.getCells().get("P2");
+        cell = worksheet.getCells().get("V2");
         cell.setValue(text3);
 
-        cell = worksheet.getCells().get("Q2");
+        cell = worksheet.getCells().get("W2");
         cell.setValue(text4);
 
-        cell = worksheet.getCells().get("R2");
+        cell = worksheet.getCells().get("X2");
         cell.setValue(text5);
 
-        cell = worksheet.getCells().get("S2");
+        cell = worksheet.getCells().get("Y2");
         cell.setValue(text6);
 
         // Сохраняем файл Excel

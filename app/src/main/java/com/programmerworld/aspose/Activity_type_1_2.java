@@ -806,6 +806,7 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
             @Override
             public void onClick(View v) {
 // Получаем выбранный элемент в Spinner
+                save1();
 
                  spinner33 = findViewById(R.id.spinner3);
                 String selectedText = spinner33.getSelectedItem().toString();

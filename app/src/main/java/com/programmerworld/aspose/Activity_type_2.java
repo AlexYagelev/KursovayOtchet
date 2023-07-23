@@ -9,6 +9,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.aspose.cells.Cell;
+import com.aspose.cells.Workbook;
+import com.aspose.cells.Worksheet;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Activity_type_2 extends AppCompatActivity {
 
     @Override
@@ -19,13 +26,41 @@ public class Activity_type_2 extends AppCompatActivity {
         findViewById(R.id.button1).setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(Activity_type_2.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
-                save();
+                  save();
             }
         });
     }
+    private List<List<String>> loadDataFromExcel3() throws Exception {
+        // Загрузка данных из Excel с помощью Aspose.Cells
+
+        Workbook workbook = new Workbook("/sdcard/Download/Книга1.xlsx");
+
+        // Получаем первый лист
+        Worksheet worksheet = workbook.getWorksheets().get(0);
+
+        // Создадим список для данных
+        List<List<String>> data = new ArrayList<>();
+
+        // Проходим по всем строкам
+        for (int rowIndex = 0; rowIndex < worksheet.getCells().getMaxDataRow()+1; rowIndex++) {
+            // Данные из одной строки
+            List<String> rowData = new ArrayList<>();
+
+            // Проходим по всем ячейкам в строке
+            for (int colIndex = 0; colIndex < worksheet.getCells().getMaxDataColumn()+1; colIndex++) {
+                Cell cell = worksheet.getCells().get(rowIndex, colIndex);
+
+                // Добавляем данные ячейки в список строки
+                rowData.add(cell.getStringValue());
+            }
+            // Добавляем список данных строки в общий список
+            data.add(rowData);
+        }    return data;
+    }
 
 
-    private void save() {
+
+    private void save(){
         ExcelDataSaverAct21 dataSaver = new ExcelDataSaverAct21("example.xlsx");
         try {
             EditText editText = findViewById(R.id.editText16);

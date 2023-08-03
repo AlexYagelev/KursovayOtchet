@@ -47,8 +47,8 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="100dp"
-        android:layout_height="45dp"
+        android:layout_width="87dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
@@ -58,8 +58,8 @@
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_width="87dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
@@ -69,8 +69,8 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="106dp"
-        android:layout_height="56dp"
+        android:layout_width="87dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
@@ -80,8 +80,8 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="106dp"
-        android:layout_height="56dp"
+        android:layout_width="87dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
@@ -91,8 +91,8 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="110dp"
-        android:layout_height="47dp"
+        android:layout_width="87dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
@@ -102,10 +102,10 @@
 
     <TextView
         android:id="@+id/textView22"
-        android:layout_width="104dp"
+        android:layout_width="87dp"
         android:layout_height="68dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Номинальный, наружный или внутренний диаметр"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,91 +113,92 @@
 
     <EditText
         android:id="@+id/editText16"
-        android:layout_width="257dp"
-        android:layout_height="57dp"
-        android:layout_marginEnd="16dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-    <EditText
-        android:id="@+id/editText17"
-        android:layout_width="241dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="20dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText16" />
-
-    <EditText
-        android:id="@+id/editText18"
-        android:layout_width="239dp"
-        android:layout_height="54dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/editText17"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:hint="Введите текст здесь"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/editText16" />
+
+    <EditText
+        android:id="@+id/editText18"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:hint="Введите текст здесь"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toBottomOf="@+id/editText17" />
 
     <EditText
         android:id="@+id/editText19"
-        android:layout_width="246dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
         app:layout_constraintTop_toBottomOf="@+id/editText18" />
 
     <EditText
         android:id="@+id/editText20"
-        android:layout_width="243dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/editText19" />
 
     <EditText
         android:id="@+id/editText21"
-        android:layout_width="251dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="12dp"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
         app:layout_constraintTop_toBottomOf="@+id/editText20" />
 
     <EditText
         android:id="@+id/editText22"
-        android:layout_width="254dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/editText21" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="125dp"
         android:layout_height="82dp"
-        android:layout_marginBottom="16dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -208,8 +209,8 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="52dp"
         android:text="»"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText22"
@@ -219,10 +220,10 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="44dp"
         android:text="«"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/editText22"
         tools:ignore="MissingConstraints" />
 

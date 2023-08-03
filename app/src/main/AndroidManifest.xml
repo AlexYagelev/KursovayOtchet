@@ -15,10 +15,19 @@
         android:theme="@style/Theme.Aspose"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_type_2_sosudi1"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_type_2_sosudi"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".Activity_type_1_2"
+            android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,19 +37,24 @@
         </activity>
         <activity
             android:name=".Activity_type_1_1"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".Activity_type_2"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".Activity_type_1"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".Activity_registr"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
     </application>
 
 </manifest>

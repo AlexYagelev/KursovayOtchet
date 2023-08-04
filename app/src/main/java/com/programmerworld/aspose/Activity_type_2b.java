@@ -17,27 +17,27 @@ import com.aspose.cells.Worksheet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Activity_type_2 extends AppCompatActivity {
+public class Activity_type_2b extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_type2);
+        setContentView(R.layout.activity_type2b);
 
         findViewById(R.id.button1).setOnClickListener(v -> {
-            if (ContextCompat.checkSelfPermission(Activity_type_2.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            if (ContextCompat.checkSelfPermission(Activity_type_2b.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
-                  save();
-                Intent intent = new Intent(Activity_type_2.this, Activity_type_2b.class);
+                save();
+                Intent intent = new Intent(Activity_type_2b.this, Activity_type_2_sosudi.class);
                 startActivity(intent);
             }
         });
 
         findViewById(R.id.button2).setOnClickListener(v -> {
-            if (ContextCompat.checkSelfPermission(Activity_type_2.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            if (ContextCompat.checkSelfPermission(Activity_type_2b.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
                 save();
-                Activity_type_2.this.finish();
+                Activity_type_2b.this.finish();
 
                 // Вернуться на предыдущий фрагмент
                 getSupportFragmentManager().popBackStack();
@@ -75,7 +75,7 @@ public class Activity_type_2 extends AppCompatActivity {
 
 
     private void save(){
-        ExcelDataSaverAct21 dataSaver = new ExcelDataSaverAct21("example.xlsx");
+        ExcelDataSaverAct21b dataSaver = new ExcelDataSaverAct21b("example.xlsx");
         try {
             EditText editText = findViewById(R.id.editText16);
             String text = editText.getText().toString();
@@ -96,13 +96,9 @@ public class Activity_type_2 extends AppCompatActivity {
             EditText editText4 = findViewById(R.id.editText20);
             String text4 = editText4.getText().toString();
 
-            EditText editText5 = findViewById(R.id.editText21);
-            String text5 = editText5.getText().toString();
 
-            EditText editText6 = findViewById(R.id.editText22);
-            String text6 = editText6.getText().toString();
 
-            dataSaver.saveData(text, text1, text2, text3, text4, text5, text6);
+            dataSaver.saveData(text, text1, text2, text3, text4);
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

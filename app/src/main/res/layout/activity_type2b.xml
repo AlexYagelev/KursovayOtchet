@@ -24,7 +24,7 @@
         android:layout_width="346dp"
         android:layout_height="42dp"
         android:layout_gravity="center"
-        android:text="ПРИЛОЖЕНИЕ № Б Сведения о результатах технического диагностирования 2.1. Общие данные"
+        android:text="ПРИЛОЖЕНИЕ № Б Сведения о результатах технического диагностирования 2.2. Общие данные"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
         android:textSize="14sp"
@@ -41,7 +41,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Наименование ТУ"
+        android:text="Рабочая температура среды, ℃"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -52,7 +52,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Наименование завода-изготовителя"
+        android:text="Марка материала корпуса"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -63,7 +63,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Год изготовления"
+        android:text="Вместимость, м³"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -74,7 +74,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Год ввода в эксплуатацию"
+        android:text="Схема подключения сосуда в установку"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -85,31 +85,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Рабочее давление, кгс/см2 (МПа)"
+        android:text="Климатическое исполнение"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="91dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Номинальный наружный или внутренний диаметр, мм"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="87dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Наименование рабочей среды"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <EditText
         android:id="@+id/editText16"
@@ -171,30 +149,6 @@
         app:layout_constraintStart_toEndOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/editText19" />
 
-    <EditText
-        android:id="@+id/editText21"
-        android:layout_width="252dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/editText20" />
-
-    <EditText
-        android:id="@+id/editText22"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/editText21" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="125dp"
@@ -209,22 +163,22 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="56dp"
         android:text="»"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText22"
+        app:layout_constraintTop_toBottomOf="@+id/editText20"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="36dp"
         android:text="«"
         app:layout_constraintEnd_toStartOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/editText22"
+        app:layout_constraintTop_toBottomOf="@+id/editText20"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

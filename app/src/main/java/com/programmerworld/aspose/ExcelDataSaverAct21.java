@@ -20,25 +20,25 @@ public class ExcelDataSaverAct21 {
         Worksheet worksheet = workbook.getWorksheets().get(0);
 
         Cell cell = worksheet.getCells().get("H1");
-        cell.setValue("Наименование объекта");
+        cell.setValue("Наименование ТУ");
 
         cell = worksheet.getCells().get("I1");
-        cell.setValue("Условное обозначение");
+        cell.setValue("Наименование завода-изготовителя");
 
         cell = worksheet.getCells().get("J1");
-        cell.setValue("Наименование завода изготовителя");
-
-        cell = worksheet.getCells().get("K1");
         cell.setValue("Год изготовления");
 
-        cell = worksheet.getCells().get("L1");
+        cell = worksheet.getCells().get("K1");
         cell.setValue("Год ввода в эксплуатацию");
 
+        cell = worksheet.getCells().get("L1");
+        cell.setValue("Рабочее давление, кгс/см2 (МПа)");
+
         cell = worksheet.getCells().get("M1");
-        cell.setValue("Рабочее давление, МПа");
+        cell.setValue("Номинальный наружный или внутренний диаметр, мм");
 
         cell = worksheet.getCells().get("N1");
-        cell.setValue("Номинальный, наружный или внутренний диаметра");
+        cell.setValue("Наименование рабочей среды");
 
 // Заполняем таблицу данными
         cell = worksheet.getCells().get("H2");

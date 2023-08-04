@@ -3,7 +3,10 @@ package com.programmerworld.aspose;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Activity_type_2_sosudi extends AppCompatActivity {
+    private EditText editText;
+    private Button button;
+    private int cellNumber = 0;
+    private TextView counterText;
+    private int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +49,60 @@ public class Activity_type_2_sosudi extends AppCompatActivity {
                 getSupportFragmentManager().popBackStack();
             }
         });
+
+
+        editText = findViewById(R.id.editText13);
+        button = findViewById(R.id.button5);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveTextToExcel();
+            }
+        });
+        counterText = findViewById(R.id.counterText);
+
+        // при старте устанавливаем текст
+        counterText.setText("Счетчик: " + counter);
     }
+
+
+    private void saveTextToExcel() {
+        String text = editText.getText().toString().trim();
+
+        // String filePath = getPreferences(MODE_PRIVATE).getString("excel_file", "");
+
+        try {
+            // Открываем xlsx файл
+            Workbook workbook = new Workbook("/sdcard/Download/example.xlsx");
+
+            // Получаем первый лист
+            Worksheet worksheet = workbook.getWorksheets().get(0);
+
+            // Записываем текст в ячейку с номером cellNumber
+            worksheet.getCells().get(cellNumber, 27).setValue(text);
+
+            // Увеличиваем счетчик ячейки
+            cellNumber++;
+
+            // Сохраняем xlsx файл
+            workbook.save("/sdcard/Download/example.xlsx");
+            counter++;
+
+            Toast.makeText(this, "Запись No" + counter + " сохранена", Toast.LENGTH_SHORT).show();
+            counterText.setText("Точка: " + counter);
+            editText.setText("");
+
+        } catch (Exception e) {
+            showError("Не удалось сохранить в Excel", e);
+        }
+    }
+
+    private void showError(String message, Exception e) {
+        // Показываем сообщение об ошибке
+    }
+
+
     private List<List<String>> loadDataFromExcel3() throws Exception {
         // Загрузка данных из Excel с помощью Aspose.Cells
 

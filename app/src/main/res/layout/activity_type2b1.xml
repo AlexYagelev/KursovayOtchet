@@ -21,10 +21,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="346dp"
-        android:layout_height="42dp"
+        android:layout_width="371dp"
+        android:layout_height="0dp"
         android:layout_gravity="center"
-        android:text="ПРИЛОЖЕНИЕ № Б Сведения о результатах технического диагностирования 2.1. Общие данные"
+        android:text="ПРИЛОЖЕНИЕ № Б Сведения о результатах технического диагностирования 3. Сведения об основных элементах сосуда"
+
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
         android:textSize="14sp"
@@ -36,87 +37,121 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="87dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
         android:gravity="center"
-        android:text="Наименование ТУ"
+        android:text="Наименование элемента сосуда"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="87dp"
-        android:layout_height="50dp"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Наименование завода-изготовителя"
+        android:text="Количество"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="87dp"
-        android:layout_height="50dp"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Год изготовления"
+        android:text="Диаметр"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="87dp"
-        android:layout_height="50dp"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Год ввода в эксплуатацию"
+        android:text="Высота"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="87dp"
-        android:layout_height="50dp"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Рабочее давление, кгс/см2 (МПа)"
+        android:text="Толщина стенки"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="91dp"
-        android:layout_height="94dp"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Номинальный наружный или внутренний диаметр, мм"
+        android:text="Марка стали"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
         android:id="@+id/textView22"
-        android:layout_width="87dp"
-        android:layout_height="68dp"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Наименование рабочей среды"
+        android:text="ГОСТ  или  ТУ"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Вид сварки"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Электрон"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Метод НК"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+
     <EditText
         android:id="@+id/editText16"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
@@ -125,10 +160,10 @@
 
     <EditText
         android:id="@+id/editText17"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
@@ -137,10 +172,10 @@
 
     <EditText
         android:id="@+id/editText18"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
@@ -149,10 +184,10 @@
 
     <EditText
         android:id="@+id/editText19"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
@@ -161,10 +196,10 @@
 
     <EditText
         android:id="@+id/editText20"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
@@ -173,10 +208,10 @@
 
     <EditText
         android:id="@+id/editText21"
-        android:layout_width="252dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
@@ -185,15 +220,51 @@
 
     <EditText
         android:id="@+id/editText22"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:hint="Введите текст здесь"
         android:inputType="text"
         android:maxLines="1"
         app:layout_constraintStart_toEndOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/editText21" />
+
+    <EditText
+        android:id="@+id/editText23"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Введите текст здесь"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/editText22" />
+
+    <EditText
+        android:id="@+id/editText24"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Введите текст здесь"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/editText23" />
+
+    <EditText
+        android:id="@+id/editText25"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Введите текст здесь"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/editText24" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -209,24 +280,24 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
         android:text="»"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText22"
+        app:layout_constraintTop_toBottomOf="@+id/editText25"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="44dp"
         android:text="«"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/editText22"
+        app:layout_constraintTop_toBottomOf="@+id/textView25"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,20 +5,20 @@ import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
 
-public class ExcelDataSaverActS {private String fileName;
+public class ExcelDataSaverActS1 {private String fileName;
 
-    public ExcelDataSaverActS(String fileName) {
+    public ExcelDataSaverActS1(String fileName) {
         this.fileName = fileName;
     }
 
-    public void saveData12(String t1,String z1,String s1, String d1, String t2,String z2,String s2, String d2,String t3,String z3,String s3,String d3) throws Exception {
+    public void saveData12(String t1,String z1,String s1, String t2,String z2,String s2, String t3,String z3,String s3) throws Exception {
 
 // Создаем новый файл Excel с помощью Aspose.Cells
         Workbook workbook = new Workbook("/sdcard/Download/example.xlsx");
         Worksheet worksheet = workbook.getWorksheets().get(0);
 
         Cell cell = worksheet.getCells().get("ad1");
-        cell.setValue("Наименование прибора");
+        cell.setValue(" ");
 
         cell = worksheet.getCells().get("af1");
         cell.setValue("Заводской номер прибора");
@@ -29,7 +29,7 @@ public class ExcelDataSaverActS {private String fileName;
         cell = worksheet.getCells().get("ah1");
         cell.setValue("Действительно до ");
 
-         cell = worksheet.getCells().get("ai1");
+        cell = worksheet.getCells().get("ai1");
         cell.setValue("Наименование прибора");
 
         cell = worksheet.getCells().get("aj1");
@@ -41,7 +41,7 @@ public class ExcelDataSaverActS {private String fileName;
         cell = worksheet.getCells().get("al1");
         cell.setValue("Действительно до ");
 
-         cell = worksheet.getCells().get("am1");
+        cell = worksheet.getCells().get("am1");
         cell.setValue("Наименование прибора");
 
         cell = worksheet.getCells().get("an1");
@@ -67,8 +67,7 @@ public class ExcelDataSaverActS {private String fileName;
         cell = worksheet.getCells().get("af2");
         cell.setValue(s1);
 
-        cell = worksheet.getCells().get("ag2");
-        cell.setValue(d1);
+
 
         cell = worksheet.getCells().get("ah2");
         cell.setValue(t2);
@@ -79,8 +78,6 @@ public class ExcelDataSaverActS {private String fileName;
         cell = worksheet.getCells().get("aj2");
         cell.setValue(s2);
 
-        cell = worksheet.getCells().get("ak2");
-        cell.setValue(d2);
 
         cell = worksheet.getCells().get("al2");
         cell.setValue(t3);
@@ -91,8 +88,6 @@ public class ExcelDataSaverActS {private String fileName;
         cell = worksheet.getCells().get("an2");
         cell.setValue(s3);
 
-        cell = worksheet.getCells().get("ao2");
-        cell.setValue(d3);
 
 
 // Сохраняем файл Exc

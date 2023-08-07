@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Aspose"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_type_2b1"
+            android:exported="false" />
+        <activity
             android:name=".Activity_type_2b"
             android:exported="false" />
         <activity

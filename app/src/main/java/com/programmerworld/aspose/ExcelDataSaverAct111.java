@@ -1,17 +1,32 @@
 package com.programmerworld.aspose;
 
+import android.os.Environment;
+
 import com.aspose.cells.Cell;
 import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
+
+import java.io.File;
 //package com.programmerworld.aspose;
 
 public class ExcelDataSaverAct111 {
 
-    private String fileName;
 
-    public ExcelDataSaverAct111(String fileName) {
+    String fileName;
+     String folderName;
+    public static String outputString;
+
+
+    public ExcelDataSaverAct111(String fileName, String folderName,  String s8) {
         this.fileName = fileName;
+        this.folderName =folderName;
+        this.outputString = s8.replace("/", "-");
+
+
+    }
+    public String getMyVariable(){
+        return outputString ;
     }
 
     public void saveData1(String s1, String s2, String s3, String s4, String s5, String s6, String s7) throws Exception {
@@ -69,11 +84,16 @@ public class ExcelDataSaverAct111 {
 
         cell = worksheet.getCells().get("G2");
         cell.setValue(s7);
-
-
+         //outputString = s7.replace("/", "-");
+        File folder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), outputString);
+        if (!folder.exists()) {
+            folder.mkdir();
+        }
         // Сохраняем файл Exc
         String outputDirectory = "/sdcard/Download"; // Место для сохранения файла
-        String outputFile = outputDirectory + "/" + fileName;
+        String outputFile = outputDirectory+ "/" +outputString + "/" + outputString+ ".xlsx";
         workbook.save(outputFile, SaveFormat.XLSX);
     }
+
+
 }

@@ -1,341 +1,500 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_type_2_sosudi">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity_type_2_sosudi1"
+    tools:ignore="MissingDefaultResource">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="503dp"
-        android:layout_height="74dp"
-        android:background="#0079C2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Body1">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
 
-    </androidx.appcompat.widget.Toolbar>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="371dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:text="ПРИЛОЖЕНИЕ № Б Сведения о результатах технического диагностирования 4. Технические характеристики и параметры"
-
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        tools:ignore="MissingConstraints" />
-
-    <ScrollView
-        android:layout_width="407dp"
-        android:layout_height="569dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2s"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintVertical_bias="0.0">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#0079C2"
+
+            android:gravity="center"
+            app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:title="Приложения"
+            app:titleMargin="16dp"
+            app:titleTextColor="#FFFFFF"
+            tools:layout_gravity="center"
+            tools:title_gravity="center">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="right"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tbox01"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="28"
+
+                        android:text="" />
+                    <TextView
+                        android:id="@+id/tbox02"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"
+
+                        android:text="Проектные" />
+
+                    <TextView
+                        android:id="@+id/tbox03"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"
+
+                        android:text="Фактические" />
+
+                    <TextView
+                        android:id="@+id/tbox04"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"
+
+                        android:text="Примечания" />
 
 
-            <EditText
-                android:id="@+id/editText12"
-                android:layout_width="70dp"
-                android:layout_height="57dp"
-                android:layout_marginStart="108dp"
-                android:layout_marginTop="16dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText9" />
-
-            <EditText
-                android:id="@+id/editText113"
-                android:layout_width="70dp"
-                android:layout_height="53dp"
-                android:layout_marginStart="108dp"
+                </LinearLayout>
 
 
-                android:layout_marginTop="20dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+            </androidx.cardview.widget.CardView>
 
-            <EditText
-                android:id="@+id/editText112"
-                android:layout_width="70dp"
-                android:layout_height="53dp"
-                android:layout_marginStart="24dp"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                android:layout_marginTop="20dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@+id/editText113"
-                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="28"
 
+                        android:gravity="center"
+                        android:text="Давление" />
 
-            <EditText
-                android:id="@+id/editText111"
-                android:layout_width="70dp"
-                android:layout_height="53dp"
-                android:layout_marginStart="24dp"
-
-
-                android:layout_marginTop="20dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@+id/editText112"
-                app:layout_constraintTop_toBottomOf="@+id/textView31" />
-
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="70dp"
-                android:layout_height="57dp"
-                android:layout_marginStart="108dp"
-                android:layout_marginTop="20dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText113" />
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="70dp"
-                android:layout_height="83dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:text="Давление, пробное гидравлическое испытание"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-            <EditText
-                android:id="@+id/editText11"
-                android:layout_width="70dp"
-                android:layout_height="83dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@+id/editText10"
-                app:layout_constraintTop_toBottomOf="@+id/editText7" />
-
-            <EditText
-                android:id="@+id/editText3"
-                android:layout_width="70dp"
-                android:layout_height="57dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@+id/editText2"
-                app:layout_constraintTop_toBottomOf="@+id/editText111" />
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="70dp"
-                android:layout_height="83dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:text="Давление, пробное пневматическое испытание"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView25" />
-
-            <EditText
-                android:id="@+id/editText10"
-                android:layout_width="70dp"
-                android:layout_height="83dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@+id/editText9"
-                app:layout_constraintTop_toBottomOf="@+id/editText6" />
-
-            <EditText
-                android:id="@+id/editText6"
-                android:layout_width="70dp"
-                android:layout_height="83dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@+id/editText5"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
-            <EditText
-                android:id="@+id/editText7"
-                android:layout_width="70dp"
-                android:layout_height="83dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@+id/editText6"
-                app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
-            <EditText
-                android:id="@+id/editText2"
-                android:layout_width="70dp"
-                android:layout_height="57dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@+id/editText1"
-                app:layout_constraintTop_toBottomOf="@+id/editText112" />
-
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="70dp"
-                android:layout_height="57dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="Расчетное давление"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-            <EditText
-                android:id="@+id/editText9"
-                android:layout_width="70dp"
-                android:layout_height="83dp"
-                android:layout_marginStart="108dp"
-                android:layout_marginTop="16dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText5" />
-
-            <EditText
-                android:id="@+id/editText5"
-                android:layout_width="70dp"
-                android:layout_height="83dp"
-                android:layout_marginStart="108dp"
-                android:layout_marginTop="16dp"
-                android:hint="Введите текст здесь"
-                android:inputType="text"
-                android:maxLines="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText1" />
-
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="70dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="73dp"
-                android:gravity="center"
-                android:text="Рабочее давление"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="75dp"
-                android:layout_height="53dp"
-                android:layout_marginStart="100dp"
-                android:gravity="center"
-                android:text="Проектные "
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="90dp"
-                android:layout_height="53dp"
-                android:layout_marginStart="20dp"
-                android:gravity="center"
-                android:text="Фактические "
-                app:layout_constraintStart_toEndOf="@+id/textView29"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="85dp"
-                android:layout_height="53dp"
-                android:layout_marginStart="16dp"
-                android:gravity="center"
-                android:text="Примечания"
-                app:layout_constraintStart_toEndOf="@+id/textView30"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="70dp"
-                android:layout_height="57dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:text="TextView"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView27" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </ScrollView>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="125dp"
-        android:layout_height="82dp"
-        android:layout_marginBottom="4dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/gd"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button1s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="36dp"
-        android:text="»"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button2s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="36dp"
-        android:text="«"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button1s"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2" />
+                    <EditText
+                        android:id="@+id/ebox11"
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"/>
+
+                    <EditText
+                        android:id="@+id/ebox12"
+
+
+
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"/>
+
+                    <EditText
+                        android:id="@+id/ebox13"
+
+
+
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tbox21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="28"
+
+                        android:gravity="center"
+                        android:text="Температура" />
+
+                    <EditText
+                        android:id="@+id/ebox21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"
+
+
+
+                       />
+
+                    <EditText
+                        android:id="@+id/ebox22"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"/>
+
+                    <EditText
+                        android:id="@+id/ebox23"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tbox31"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="28"
+
+                        android:gravity="center"
+                        android:text="Рабочая среда" />
+
+                    <EditText
+                        android:id="@+id/ebox31"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"/>
+
+                    <EditText
+                        android:id="@+id/ebox33"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="24"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#0079C2"
+                        android:text="Приложение 4" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox4"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#0079C2"
+                        android:text="Приложение 5" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox5"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#0079C2"
+                        android:text="Приложение 6" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox6"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#0079C2"
+                        android:text="Приложение 7" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox7"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#0079C2"
+                        android:text="Приложение 8" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox8"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#0079C2"
+                        android:text="Приложение 9" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox9"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#0079C2"
+                        android:text="Приложение 10" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox10"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

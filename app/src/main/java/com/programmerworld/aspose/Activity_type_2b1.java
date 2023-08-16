@@ -2,13 +2,11 @@ package com.programmerworld.aspose;
 
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import com.aspose.cells.Cell;
 import com.aspose.cells.Workbook;
@@ -25,23 +23,21 @@ public class Activity_type_2b1 extends AppCompatActivity {
         setContentView(R.layout.activity_type2b1);
 
         findViewById(R.id.button1).setOnClickListener(v -> {
-            if (ContextCompat.checkSelfPermission(Activity_type_2b1.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    == PackageManager.PERMISSION_GRANTED) {
+
                 save();
                 Intent intent = new Intent(Activity_type_2b1.this, Activity_type_2_sosudi1.class);
                 startActivity(intent);
-            }
+
         });
 
         findViewById(R.id.button2).setOnClickListener(v -> {
-            if (ContextCompat.checkSelfPermission(Activity_type_2b1.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    == PackageManager.PERMISSION_GRANTED) {
+
                 save();
                 Activity_type_2b1.this.finish();
 
                 // Вернуться на предыдущий фрагмент
                 getSupportFragmentManager().popBackStack();
-            }
+
         });
     }
     private List<List<String>> loadDataFromExcel3() throws Exception {

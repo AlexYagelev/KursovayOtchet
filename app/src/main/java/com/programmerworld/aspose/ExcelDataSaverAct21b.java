@@ -16,7 +16,7 @@ public class ExcelDataSaverAct21b {
     public void saveData(String nameObject, String uslObz, String nameFactory, String yearGo, String yearLGo) throws Exception {
 
 // Создаем новый файл Excel с помощью Aspose.Cells
-        Workbook workbook = new Workbook("/sdcard/Download/example.xlsx");
+        Workbook workbook = new Workbook("/sdcard/Download"+"/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString+".xlsx");
         Worksheet worksheet = workbook.getWorksheets().get(0);
 
         Cell cell = worksheet.getCells().get("o1");
@@ -56,7 +56,7 @@ public class ExcelDataSaverAct21b {
 
 // Сохраняем файл Exc
         String outputDirectory = "/sdcard/Download"; // Место для сохранения файла
-        String outputFile = outputDirectory + "/" + fileName;
+        String outputFile = outputDirectory +"/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString+".xlsx";
         workbook.save(outputFile, SaveFormat.XLSX);
     }
 }

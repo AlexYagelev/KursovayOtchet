@@ -9,5 +9,7 @@
         <item>Тип 1</item>
         <item>Тип 2</item>
     </string-array>
+    <string name="title_activity_type_shb">Activity_type_SHB</string>
+    <string name="title_activity_compose">compose</string>
 
 </resources>

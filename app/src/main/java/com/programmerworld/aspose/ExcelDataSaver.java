@@ -1,73 +1,65 @@
 package com.programmerworld.aspose;
 
-import com.aspose.cells.Cell;
-import com.aspose.cells.SaveFormat;
+import android.Manifest;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Environment;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
-//package com.programmerworld.aspose;
 
 public class ExcelDataSaver {
-
+    private AppCompatActivity activity;
     private String fileName;
 
     public ExcelDataSaver(String fileName) {
+        this.activity = activity;
         this.fileName = fileName;
     }
 
     public void saveData(String manufacturerNumber, String serialNumber, String productionDate, String place, String location, String operationDate) throws Exception {
-
-        // Создаем новый файл Excel с помощью Aspose.Cells
-        Workbook workbook = new Workbook("/sdcard/Download/example.xlsx");
-        Worksheet worksheet = workbook.getWorksheets().get(0);
+        int permissionCheck = ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
 
-        Cell cell = worksheet.getCells().get("H1");
-        cell.setValue("Завод-Изготовитель номер");
+            // Создаем новый файл Excel с помощью Aspose.Cells
+            Workbook workbook = new Workbook(String.valueOf(getDocumentUri()));
+            Worksheet worksheet = workbook.getWorksheets().get(0);
 
-        cell = worksheet.getCells().get("I1");
-        cell.setValue("Заводской номер");
+            // Ваш остальной код сохранения данных
 
-        cell = worksheet.getCells().get("J1");
-        cell.setValue("Дата изготовления");
+            String outputDirectory = Environment.DIRECTORY_DOWNLOADS;
+            String outputFile = outputDirectory + "/" + fileName;
 
-        cell = worksheet.getCells().get("K1");
-        cell.setValue("Место Эксплуатации");
-
-        cell = worksheet.getCells().get("L1");
-        cell.setValue("Регистрационный номер");
-
-        cell = worksheet.getCells().get("M1");
-        cell.setValue("Дата ввода в эксплуатацию");
+            // Ваш остальной код сохранения файла
 
 
+        }
 
 
+    private Uri getDocumentUri() {
+        Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.setType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+        intent.putExtra(Intent.EXTRA_TITLE, fileName);
 
+        activity.startActivityForResult(intent, 2);
 
+        // Ваш код для обработки ответа получения URI после запуска активности выбора файла
 
-        // Заполняем таблицу данными
-        cell = worksheet.getCells().get("H2");
-        cell.setValue(manufacturerNumber);
+        // Возвращаем заглушку как временное решение
+        return Uri.EMPTY;
+    }
 
-        cell = worksheet.getCells().get("I2");
-        cell.setValue(serialNumber);
+    public void handleActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 2 && resultCode == AppCompatActivity.RESULT_OK) {
+            if (data != null && data.getData() != null) {
+                Uri uri = data.getData();
 
-        cell = worksheet.getCells().get("J2");
-        cell.setValue(place);
-
-        cell = worksheet.getCells().get("K2");
-        cell.setValue(productionDate);
-
-        cell = worksheet.getCells().get("L2");
-        cell.setValue(location);
-
-        cell = worksheet.getCells().get("M2");
-        cell.setValue(operationDate);
-
-
-        // Сохраняем файл Exc
-        String outputDirectory = "/sdcard/Download"; // Место для сохранения файла
-        String outputFile = outputDirectory + "/" + fileName;
-        workbook.save(outputFile, SaveFormat.XLSX);
+                // Используйте полученный URI для сохранения файла
+            }
+        }
     }
 }

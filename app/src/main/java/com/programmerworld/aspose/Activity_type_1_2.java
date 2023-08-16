@@ -1,33 +1,53 @@
 package com.programmerworld.aspose;
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.aspose.cells.Cell;
 import com.aspose.cells.Cells;
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
 
+import java.io.FileNotFoundException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
-public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpinner;
+public class Activity_type_1_2 extends AppCompatActivity {
+    private static final int REQUEST_CODE = 100 ;
+    private Spinner eoSpinner;
     private Spinner objectNameSpinner;
     private Spinner objectSpinner;
     private Spinner workSpinner;
     private Spinner dataSpinner;
-
-
+    private static final int REQUEST_READ_STORAGE = 100;
+private String tag = "Жизненный цикл";
     private List<String> eoValues = new ArrayList<>();
     private List<String> objectNameValues = new ArrayList<>();
     private List<String> objectValues = new ArrayList<>();
@@ -43,29 +63,55 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
     private Spinner spinner33;
     private Spinner spinner4;
     private Spinner spinner5;
+    private TextView tvPermission;
+    private Button btnPermission;
+    private static final int PERMISSION_STORAGE = 101;
     String ST;
+    private DeviceExplorerViewImpl explorerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_type12);
-        /*try { spin();} catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-      */  try {
-            clip();
+        setContentView(R.layout.ak);
+Log.i(tag, "onCreate()");
+        View rootView = getWindow().getDecorView().getRootView();
+        rootView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                hideKeyboard();
+                return false;
+            }
+        });
+         tvPermission = findViewById(R.id.tvPermission);
+         btnPermission = findViewById(R.id.btnPermission);
+        if (PermissionUtils.hasPermissions(this)) {
+            tvPermission.setText("Разрешение получено");
+        } else {
+            tvPermission.setText("Разрешение не предоставлено");
+        }btnPermission.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                if (PermissionUtils.hasPermissions(Activity_type_1_2.this)) return;
+                PermissionUtils.requestPermissions(Activity_type_1_2.this, PERMISSION_STORAGE);
+            }
+        });
 
 
 
+        try {explorerView = new DeviceExplorerViewImpl(this);
 
-            spinner = findViewById(R.id.spinner8);    spinner2 = findViewById(R.id.spinner2);
+            // Создаем объект для передачи в метод
+            TransferSupport support = new TransferSupport();
 
-
-
+            // Вызываем метод импорта данных
+            explorerView.importData(support);
+              clip();
+            spinner = findViewById(R.id.spinner8);
+            spinner2 = findViewById(R.id.spinner2);
             clip3();
+
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    // Делаем второй спиннер недоступным, если выбрано первое значение в первом спиннере
                     spinner2.setEnabled(position != 0);
                 }
 
@@ -73,20 +119,211 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
+
             clip4();
             clip5();
             clip6();
             clip7();
-          clip8();
+            clip8();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
+        Log.i(tag, "onStart()");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
+        Log.i(tag, "onResume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
+        Log.i(tag, "onPause()");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
+        Log.i(tag, "onStop()");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
+        Log.i(tag, "onRestart()");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
+        Log.i(tag, "onDestroy()");
+    }
+
+    private void hideKeyboard() {
+        View view = getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
 
 
+    public class DeviceExplorerViewImpl {Context context;
 
+        public DeviceExplorerViewImpl(Context context) {
+            this.context = context;
+        }
+
+        private void showError(String error) {
+            Toast.makeText(context, error, Toast.LENGTH_LONG).show();
+        }
+
+        // Метод импорта данных
+        public void importData(TransferSupport support) {
+
+            // Проверяем, поддерживает ли компонент перетаскивание
+            if(!support.isDrop()) {
+                // Если нет - выходим из метода
+                return;
+            }
+
+            try {
+                // Получаем информацию о перетаскивании
+                DropLocation dropLocation = support.getDropLocation();
+
+                // Дальнейший код импорта данных
+                // используя dropLocation
+
+            } catch (IllegalStateException e) {
+
+                // Обрабатываем ошибку
+                showError("Невозможно импортировать данные");
+
+            }
+
+        }
+
+    }
+
+    // Класс-помощник для работы с перетаскиванием
+    class TransferSupport {
+
+        public boolean isDrop() {
+            // проверка поддержки перетаскивания компонентом
+            return true;
+        }
+
+        public DropLocation getDropLocation() {
+            // код получения информации о местоположении drop
+            return new DropLocation(0, 0);
+        }
+
+    }
+
+    // Класс хранения информации о местоположении
+    class DropLocation {
+
+        int x;
+        int y;
+
+        public DropLocation(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+    }
+    private static final int PERMISSION_REQUEST_CODE = 1;
+    private void checkPermissions() throws Exception {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
+            }else {
+                clip();
+                spinner = findViewById(R.id.spinner8);
+                spinner2 = findViewById(R.id.spinner2);
+                clip3();
+
+                spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        spinner2.setEnabled(position != 0);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                    }
+                });
+
+                clip4();
+                clip5();
+                clip6();
+                clip7();
+                clip8();
+            }
+
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSION_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                // Разрешения получены, выполните необходимые операции
+                try { clip();
+                spinner = findViewById(R.id.spinner8);
+                spinner2 = findViewById(R.id.spinner2);
+                clip3();
+
+                spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        spinner2.setEnabled(position != 0);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                    }
+                });
+
+                clip4();
+                clip5();
+                clip6();
+                clip7();
+
+                    clip8();
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            } else {
+                // Разрешения не получены, обработайте это соответствующим образом
+            }
+        }
+    }
 
 
 // Устанавливаем слушатель выбора элементов для первого спиннера
 
 // Создаем ArrayAdapter с помощью массива строк и стандартного внешнего вида
-
 
 
 // Проверяем значения всех пяти спинеров при создании активности
@@ -182,9 +419,7 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
                 }
             });*/
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+
 
         //AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
 
@@ -194,7 +429,10 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
             throw new RuntimeException(e);
         }  */
 
-    }
+
+
+
+
     private void clip3() throws Exception {
 
 
@@ -560,32 +798,45 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
 
     private List<List<String>> loadDataFromExcel() throws Exception {
-        // Загрузка данных из Excel с помощью Aspose.Cells
+        List<List<String>> data = null;
 
-        Workbook workbook = new Workbook("/sdcard/Download/Книга1.xlsx");
 
-        // Получаем первый лист
-        Worksheet worksheet = workbook.getWorksheets().get(0);
+            // Если разрешение уже есть, загрузить данные
+            try {
+                // Загрузка данных из Excel с помощью Aspose.Cells
 
-        // Создадим список для данных
-        List<List<String>> data = new ArrayList<>();
+                Workbook workbook = new Workbook("/storage/emulated/0/Download/Книга1.xlsx");
 
-        // Проходим по всем строкам
-        for (int rowIndex = 0; rowIndex < worksheet.getCells().getMaxDataRow(); rowIndex++) {
-            // Данные из одной строки
-            List<String> rowData = new ArrayList<>();
+                // Получаем первый лист
+                Worksheet worksheet = workbook.getWorksheets().get(0);
 
-            // Проходим по всем ячейкам в строке
-            for (int colIndex = 0; colIndex < worksheet.getCells().getMaxDataColumn(); colIndex++) {
-                Cell cell = worksheet.getCells().get(rowIndex, colIndex);
+                // Создадим список для данных
+                data = new ArrayList<>();
 
-                // Добавляем данные ячейки в список строки
-                rowData.add(cell.getStringValue());
+                // Проходим по всем строкам
+                for (int rowIndex = 0; rowIndex < worksheet.getCells().getMaxDataRow(); rowIndex++) {
+                    // Данные из одной строки
+                    List<String> rowData = new ArrayList<>();
+
+                    // Проходим по всем ячейкам в строке
+                    for (int colIndex = 0; colIndex < worksheet.getCells().getMaxDataColumn(); colIndex++) {
+                        Cell cell = worksheet.getCells().get(rowIndex, colIndex);
+
+                        // Добавляем данные ячейки в список строки
+                        rowData.add(cell.getStringValue());
+                    }
+
+                    // Добавляем список данных строки в общий список
+                    data.add(rowData);
+                }
+
+
+            } catch (FileNotFoundException e) {
+
+                // Обработка ошибки отсутствия файла
+                Toast.makeText(this, "Файл не найден", Toast.LENGTH_SHORT).show();
+
             }
-
-            // Добавляем список данных строки в общий список
-            data.add(rowData);
-        }
 
         return data;
     }
@@ -787,6 +1038,7 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
        spinner6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
 // Если выбран не первый элемент, то разблокируем кнопку
                 if (position != 0) {
                     button2.setEnabled(true);
@@ -807,11 +1059,12 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
             public void onClick(View v) {
 // Получаем выбранный элемент в Spinner
                 save1();
+                saveW();
 
                  spinner33 = findViewById(R.id.spinner3);
                 String selectedText = spinner33.getSelectedItem().toString();
                 if (selectedText.equals("Обследование сосудов и аппаратов")) {
-                    Intent intent = new Intent(Activity_type_1_2.this, Activity_type_2.class);
+                    Intent intent = new Intent(Activity_type_1_2.this, Activity_type_SHB1.class);
                     startActivity(intent);
                 } else if (selectedText.equals("Обследование ТПА")) {
                    Intent intent = new Intent(Activity_type_1_2.this, MainActivity.class);
@@ -989,8 +1242,14 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         secondListSpinner.setAdapter(adapter);
     }*/
 
+    String fName;
+
+
     private void save1(){
-        ExcelDataSaverAct111 dataSaver1 = new ExcelDataSaverAct111("example.xlsx");
+        String s8 = spinner6.getSelectedItem().toString();
+
+        String s00 = s8.replace("/", "");
+        ExcelDataSaverAct111 dataSaver1 = new ExcelDataSaverAct111(fileName, folderName,s8);
         try {
 
 
@@ -1015,6 +1274,7 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
 
              spinner6 = findViewById(R.id.spinner6);
             String s7 = spinner6.getSelectedItem().toString();
+            fName = s7;
 
 
 
@@ -1039,5 +1299,112 @@ public class Activity_type_1_2 extends AppCompatActivity {private Spinner eoSpin
         }
 
     }
+
+
+    private void saveW(){
+        String s8 = spinner6.getSelectedItem().toString();
+
+        String s00 = s8.replace("/", "");
+
+        try {
+
+
+
+            autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+            String s1 = autoCompleteTextView.getText().toString();
+
+            spinner = findViewById(R.id.spinner8);
+            String s2 = spinner.getSelectedItem().toString();
+
+            spinner2 = findViewById(R.id.spinner2);
+            String s3 = spinner2.getSelectedItem().toString();
+
+            spinner3 = findViewById(R.id.spinner3);
+            String s4 = spinner3.getSelectedItem().toString();
+
+            spinner4 = findViewById(R.id.spinner4);
+            String s5 = spinner4.getSelectedItem().toString();
+
+            spinner5 = findViewById(R.id.spinner5);
+            String s6 = spinner5.getSelectedItem().toString();
+
+            spinner6 = findViewById(R.id.spinner6);
+            String s7 = spinner6.getSelectedItem().toString();
+            fName = s7;
+
+
+
+
+            // Вставить значение в первую ячейку
+
+
+
+
+
+
+
+
+
+
+
+
+            Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Ошибка при сохранении данных", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+
+
+
+    String folderName =" " ;
+    String fileName ="2";
+    public String getCurrentDate() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
+        return sdf.format(new Date());
+    }
+
+    public String getCurrentDateTime() {
+        spinner6 = findViewById(R.id.spinner6);
+        String s7 = spinner6.getSelectedItem().toString();
+        return (s7);
+    }
+
+
+
+    public class PermissionUtils {
+        public static boolean hasPermissions(Context context) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                return Environment.isExternalStorageManager();
+            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                return ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                        == PackageManager.PERMISSION_GRANTED;
+            } else {
+                return true;
+            }
+        }
+
+        public static void requestPermissions(Activity activity, int requestCode) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                try {
+                    Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                    intent.addCategory("android.intent.category.DEFAULT");
+                    intent.setData(Uri.parse(String.format("package:%s", activity.getPackageName())));
+                    activity.startActivityForResult(intent, requestCode);
+                } catch (Exception e) {
+                    Intent intent = new Intent();
+                    intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+                    activity.startActivityForResult(intent, requestCode);
+                }
+            } else {
+                ActivityCompat.requestPermissions(activity,
+                        new String[] { Manifest.permission.WRITE_EXTERNAL_STORAGE },
+                        requestCode);
+            }
+        }
+    }
+
 }
 

@@ -1,11 +1,13 @@
 package com.programmerworld.aspose;
 
+import androidx.lifecycle.ViewModel;
+
 import com.aspose.cells.Cell;
 import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
 
-public class ExcelDataSaverAct21b {
+public class ExcelDataSaverAct21b extends ViewModel {
 
     private String fileName;
 

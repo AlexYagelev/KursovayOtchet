@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource"
+
+    android:paddingBottom="0dp"
+    android:name=".activity_type2b2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0079C2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Протокол анализа технической документации  4. Технические характеристики и параметры.
+ "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/white" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="?actionBarSize"
+        android:isScrollContainer="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text0"
+                        android:gravity="center"
+                        android:text="Наименование показателей"/>
+
+                    <TextView
+                        android:text="Проектные"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text00"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:text="Фактические"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text000"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:text="Примечание"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text0000"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text1"
+                        android:gravity="center"
+                        android:text="Рабочее давление, кгс/см2"/>
+
+                    <EditText
+                        android:id="@+id/editText1_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText1_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText1_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text2"
+                        android:gravity="center"
+                        android:text="Расчетное давление, кгс/см2"/>
+
+                    <EditText
+                        android:id="@+id/editText2_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText2_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText2_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text3"
+                        android:gravity="center"
+                        android:text="Пробное пневматическое испытание, давление, кгс/см2"/>
+
+                    <EditText
+                        android:id="@+id/editText3_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText3_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText3_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text4"
+                        android:gravity="center"
+                        android:text="Пробное гидравлическое испытание, давление, кгс/см2"/>
+
+                    <EditText
+                        android:id="@+id/editText4_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText4_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText4_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text5"
+                        android:gravity="center"
+                        android:text="Расчетная стенка, Температура, °С"/>
+
+                    <EditText
+                        android:id="@+id/editText5_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText5_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText5_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text6"
+                        android:gravity="center"
+                        android:text="Рабочая среда, Температура, °С"/>
+
+                    <EditText
+                        android:id="@+id/editText6_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь" />
+                    <EditText
+                        android:id="@+id/editText6_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText6_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text7"
+                        android:gravity="center"
+                        android:text="Стенка, минимально допустимая отрицательная, Температура, °С"/>
+
+                    <EditText
+                        android:id="@+id/editText7_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText7_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText7_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text8"
+                        android:gravity="center"
+                        android:text="Состав рабочей среды"/>
+
+                    <EditText
+                        android:id="@+id/editText8_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText8_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText8_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text9"
+                        android:gravity="center"
+                        android:text="Класс опасности по ГОСТ 12.1.007, рабочей среды"/>
+
+                    <EditText
+                        android:id="@+id/editText9_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText9_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText9_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text10"
+                        android:gravity="center"
+                        android:text="Взрывоопасность, рабочей среды"/>
+
+                    <EditText
+                        android:id="@+id/editText10_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText10_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText10_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text11"
+                        android:gravity="center"
+                        android:text="Пожароопасность, рабочей среды"/>
+
+                    <EditText
+                        android:id="@+id/editText11_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText11_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText11_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text12"
+                        android:gravity="center"
+                        android:text="Объем, м³"/>
+
+                    <EditText
+                        android:id="@+id/editText12_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText12_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText12_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text13"
+                        android:gravity="center"
+                        android:text="Масса порожнего сосуда, кг"/>
+
+                    <EditText
+                        android:id="@+id/editText13_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText13_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText13_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text14"
+                        android:gravity="center"
+                        android:text="Прибавка к толщине для компенсации коррозии (эрозии), мм"/>
+
+                    <EditText
+                        android:id="@+id/editText14_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText14_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText14_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text15"
+                        android:gravity="center"
+                        android:text="Число циклов нагружения (пусков-остановов)"/>
+
+                    <EditText
+                        android:id="@+id/editText15_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText15_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText15_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:id="@+id/Text16"
+                        android:gravity="center"
+                        android:text="Срок службы, лет"/>
+
+                    <EditText
+                        android:id="@+id/editText16_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText16_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+                    <EditText
+                        android:id="@+id/editText16_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+
+        android:gravity="center"
+        app:fabCradleMargin="8dp">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:text="«"
+
+
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="ЗАПИСАТЬ"
+
+            tools:ignore="MissingConstraints"
+
+            />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:text="»"
+
+            tools:ignore="MissingConstraints"
+
+            />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

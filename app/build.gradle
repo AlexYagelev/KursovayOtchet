@@ -35,6 +35,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_16
         targetCompatibility JavaVersion.VERSION_16
@@ -43,6 +44,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 
     packagingOptions {
         resources {
@@ -56,8 +58,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
 
-   // implementation files('libs/ javassist-3.24.1-GA.jar')
-   // implementation files('libs/aspose-words-cracked.jar')
+    // implementation files('libs/ javassist-3.24.1-GA.jar')
+    // implementation files('libs/aspose-words-cracked.jar')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation files('libs/aspose-cells-23.6-android.via.java.jar')
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'

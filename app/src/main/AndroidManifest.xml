@@ -24,6 +24,17 @@
         android:theme="@style/Theme.Aspose"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_type_2b3"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_type_2b2"
+            android:exported="false" />
+        <activity
+            android:name=".comp"
+            android:exported="false"
+            android:label="@string/title_activity_comp"
+            android:theme="@style/Theme.Aspose" />
+        <activity
             android:name=".compose"
             android:exported="false"
             android:label="@string/title_activity_compose"

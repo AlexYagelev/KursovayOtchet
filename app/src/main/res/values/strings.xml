@@ -11,5 +11,6 @@
     </string-array>
     <string name="title_activity_type_shb">Activity_type_SHB</string>
     <string name="title_activity_compose">compose</string>
+    <string name="title_activity_comp">comp</string>
 
 </resources>

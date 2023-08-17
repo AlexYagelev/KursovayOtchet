@@ -1,303 +1,494 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_type_2_1">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource"
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    android:paddingBottom="0dp"
+    android:name=".activity_type2">
+
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp"
-        android:background="#0079C2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Body1">
+        android:layout_height="wrap_content">
 
-    </androidx.appcompat.widget.Toolbar>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0079C2">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="371dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:text="ПРИЛОЖЕНИЕ № Б Сведения о результатах технического диагностирования 3. Сведения об основных элементах сосуда"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Протокол анализа технической документации  3. Сведения об основных элементах сосуда. "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/white" />
 
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        tools:ignore="MissingConstraints" />
+        </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:text="Наименование элемента сосуда"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Количество"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Диаметр"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Высота"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Толщина стенки"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Марка стали"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="ГОСТ  или  ТУ"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Вид сварки"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Электрон"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Метод НК"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="?actionBarSize"
+        android:isScrollContainer="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
-    <EditText
-        android:id="@+id/editText16"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
 
-    <EditText
-        android:id="@+id/editText17"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/editText16" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/editText18"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toBottomOf="@+id/editText17" />
+                    <TextView
+                        android:id="@+id/Text0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
 
-    <EditText
-        android:id="@+id/editText19"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/editText18" />
+                        android:background="#E8D952"
+                        android:gravity="center"
+                        android:text="Внимание!!! Если вы используете несколько приборов заполните данный экран несколько раз." />
 
-    <EditText
-        android:id="@+id/editText20"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/editText19" />
 
-    <EditText
-        android:id="@+id/editText21"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/editText20" />
 
-    <EditText
-        android:id="@+id/editText22"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/editText21" />
+                </LinearLayout>
 
-    <EditText
-        android:id="@+id/editText23"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/editText22" />
+            </androidx.cardview.widget.CardView>
 
-    <EditText
-        android:id="@+id/editText24"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView24"
-        app:layout_constraintTop_toBottomOf="@+id/editText23" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
 
-    <EditText
-        android:id="@+id/editText25"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Введите текст здесь"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@+id/textView25"
-        app:layout_constraintTop_toBottomOf="@+id/editText24" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="125dp"
-        android:layout_height="82dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/gd"
-        tools:ignore="MissingConstraints" />
+                    <TextView
+                        android:id="@+id/Text1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:text="Наименование прибора" />
+
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text=" Количество"/>
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text=" Диаметр, внутренний, мм"/>
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text=" Длинна или высота, мм"/>
+
+                    <EditText
+                        android:id="@+id/editText4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text=" Толщина стенки, номинальная, мм"/>
+
+                    <EditText
+                        android:id="@+id/editText5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text="Расчет толщины стенки, мм"/>
+
+                    <EditText
+                        android:id="@+id/editText6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text="Материал, марка стали"/>
+
+                    <EditText
+                        android:id="@+id/editText7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text="Материал, ГОСТ"/>
+
+                    <EditText
+                        android:id="@+id/editText8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text="Данные о сварке,вид сварки"/>
+
+                    <EditText
+                        android:id="@+id/editText9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text10"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text="Данные о сварке,Электроды, сварочная проволока (тип, марка ГОСТ или ТУ)"/>
+
+                    <EditText
+                        android:id="@+id/editText10"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:text="Данные о сварке, Метод неразрушающего контроля"/>
+
+                    <EditText
+                        android:id="@+id/editText11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:gravity="center"
+                        android:hint="Введите текст здесь"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="32dp"
-        android:text="»"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText25"
-        tools:ignore="MissingConstraints" />
+        android:layout_gravity="bottom"
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="44dp"
-        android:text="«"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/textView25"
-        tools:ignore="MissingConstraints" />
+        android:gravity="center"
+        app:fabCradleMargin="8dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:text="«"
+
+
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="ЗАПИСАТЬ"
+
+            tools:ignore="MissingConstraints"
+
+            />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:text="»"
+
+            tools:ignore="MissingConstraints"
+
+            />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -47,7 +47,7 @@ public class Activity_type_2 extends AppCompatActivity {
 
                 Intent intent = new Intent(Activity_type_2.this, Activity_type_2b.class);
                 startActivity(intent);
-
+            // Activity_type_2.this.finish();
         });
 
         findViewById(R.id.button2).setOnClickListener(v -> {

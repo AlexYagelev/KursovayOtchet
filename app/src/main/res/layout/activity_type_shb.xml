@@ -64,15 +64,6 @@
                         android:background="#0079C2"
                         android:text="Протокол анализа технической документации" />
 
-                    <CheckBox
-                        android:id="@+id/checkbox1"
-
-                        android:clickable="false"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
 
                 </LinearLayout>
 
@@ -97,14 +88,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#0079C2"
-                        android:text="Приложение 2" />
-
-                    <CheckBox
-                        android:id="@+id/checkbox2"
-                        android:clickable="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
+                        android:text="Протокол по результатам оперативной (функциональной) диагностики " />
 
 
                 </LinearLayout>
@@ -132,13 +116,6 @@
                         android:background="#0079C2"
                         android:text="Приложение 3" />
 
-                    <CheckBox
-                        android:id="@+id/checkbox3"
-                        android:clickable="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
 
                 </LinearLayout>
 
@@ -164,13 +141,6 @@
                         android:layout_weight="1"
                         android:background="#0079C2"
                         android:text="Приложение 4" />
-
-                    <CheckBox
-                        android:id="@+id/checkbox4"
-                        android:clickable="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
 
 
                 </LinearLayout>
@@ -198,13 +168,6 @@
                         android:layout_weight="1"
                         android:background="#0079C2"
                         android:text="Приложение 5" />
-
-                    <CheckBox
-                        android:id="@+id/checkbox5"
-                        android:clickable="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
 
 
                 </LinearLayout>
@@ -235,13 +198,6 @@
                         android:background="#0079C2"
                         android:text="Приложение 6" />
 
-                    <CheckBox
-                        android:id="@+id/checkbox6"
-                        android:clickable="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
 
                 </LinearLayout>
 
@@ -269,13 +225,6 @@
                         android:layout_weight="1"
                         android:background="#0079C2"
                         android:text="Приложение 7" />
-
-                    <CheckBox
-                        android:id="@+id/checkbox7"
-                        android:clickable="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
 
 
                 </LinearLayout>
@@ -306,13 +255,6 @@
                         android:background="#0079C2"
                         android:text="Приложение 8" />
 
-                    <CheckBox
-                        android:id="@+id/checkbox8"
-                        android:clickable="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
 
                 </LinearLayout>
 
@@ -342,13 +284,6 @@
                         android:background="#0079C2"
                         android:text="Приложение 9" />
 
-                    <CheckBox
-                        android:id="@+id/checkbox9"
-                        android:clickable="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
 
                 </LinearLayout>
 
@@ -377,13 +312,6 @@
                         android:layout_weight="1"
                         android:background="#0079C2"
                         android:text="Приложение 10" />
-
-                    <CheckBox
-                        android:id="@+id/checkbox10"
-                        android:clickable="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
 
 
                 </LinearLayout>

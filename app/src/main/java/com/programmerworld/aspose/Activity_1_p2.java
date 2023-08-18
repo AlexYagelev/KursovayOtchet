@@ -16,27 +16,28 @@ import com.aspose.cells.Worksheet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Activity_type_2b1 extends AppCompatActivity {
+public class Activity_1_p2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_type2b1);
+        setContentView(R.layout.activity_activity1_p2);
 
         findViewById(R.id.button1).setOnClickListener(v -> {
 
-                //save();
-                Intent intent = new Intent(Activity_type_2b1.this, Activity_type_2b2.class);
-                startActivity(intent);
-            //   Activity_type_2b1.this.finish();
+            //save();
+            Intent intent = new Intent(this, Activity_type_SHB1.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
+            //   Activity_type_2b7.this.finish();
         });
         findViewById(R.id.button3).setOnClickListener(v -> {
 
             save();
 
-                Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
 
-                clearFields();
+
 
 
         });
@@ -44,10 +45,10 @@ public class Activity_type_2b1 extends AppCompatActivity {
         findViewById(R.id.button2).setOnClickListener(v -> {
 
             //save();
-                Activity_type_2b1.this.finish();
+            Activity_1_p2.this.finish();
 
-                // Вернуться на предыдущий фрагмент
-                getSupportFragmentManager().popBackStack();
+            // Вернуться на предыдущий фрагмент
+            getSupportFragmentManager().popBackStack();
 
         });
     }
@@ -121,103 +122,69 @@ public class Activity_type_2b1 extends AppCompatActivity {
     private void save(){
         ExcelDataSaverAct21d dataSaver = new ExcelDataSaverAct21d("example.xlsx");
         try {
-
-
-            TextView Text = findViewById(R.id.Text1);
-            String text = Text.getText().toString();
-
-             //user.setU1((text));
-
-            EditText editText1 = findViewById(R.id.editText1);
-            String text1 = editText1.getText().toString();
-
             User user =new User();
+
+            TextView Text = findViewById(R.id.Text0);
+            String text = Text.getText().toString();
+            TextView Text1_1 = findViewById(R.id.Text1);
+            String text1 = Text1_1.getText().toString();
+
+            //user.setU1((text));
+
+
+
             user.setU1((text));
-            user.setUU1((text1));
+            user.setU2((text1));
 
-// Вставить значение в первую ячейку
+            TextView Text1_2 = findViewById(R.id.Text00);
+            user.setUU1( "#1_2_1_1"+Text1_2.getText().toString());
+            EditText editText1_2 = findViewById(R.id.editText1);
+            user.setUU2( "#1_2_1_1"+ editText1_2.getText().toString());
 
-            TextView Text2 = findViewById(R.id.Text2);
-            String text2 = Text2.getText().toString();
-            user.setU2((text2));
-
-
-            EditText editText2 = findViewById(R.id.editText2);
-            String text3 = editText2.getText().toString();
-            user.setUU2((text3));
-
-            TextView Text3 = findViewById(R.id.Text3);
-            String text5 = Text3.getText().toString();
-            user.setU3((text5));
-
-
-            EditText editText3 = findViewById(R.id.editText3);
-            String text6 = editText3.getText().toString();
-            user.setUU3(String.valueOf(text6));
-
-            TextView Text4 = findViewById(R.id.Text4);
-            user.setU4(Text4.getText().toString());
-
-
-            EditText editText4 = findViewById(R.id.editText4);
-            user.setUU4(editText4.getText().toString());
-
-            TextView Text5 = findViewById(R.id.Text5);
-            user.setU5(Text5.getText().toString());
-
-
-            EditText editText5 = findViewById(R.id.editText5);
-            user.setUU5(editText5.getText().toString());
-
-            TextView Text6 = findViewById(R.id.Text6);
-            user.setU6(Text6.getText().toString());
-
-
-            EditText editText6 = findViewById(R.id.editText6);
-            user.setUU6(editText6.getText().toString());
-
-// Вставить значение в первую ячейку
+            TextView Text1_3 = findViewById(R.id.Text000);
+            user.setUUU1( Text1_3.getText().toString());
+            EditText editText1_3 = findViewById(R.id.editText111);
+            user.setUUU2(  editText1_3.getText().toString());
 
 
 
-            TextView Text7 = findViewById(R.id.Text7);
-            user.setU7(Text7.getText().toString());
 
-
-            EditText editText7 = findViewById(R.id.editText7);
-            user.setUU7(editText7.getText().toString());
-
-            TextView Text8 = findViewById(R.id.Text8);
-            user.setU8(Text8.getText().toString());
-
-
-            EditText editText8 = findViewById(R.id.editText8);
-            user.setUU8(editText8.getText().toString());
-
-            TextView Text9 = findViewById(R.id.Text9);
-            user.setU9(Text9.getText().toString());
-
-
-            EditText editText9 = findViewById(R.id.editText9);
-            user.setUU9(editText9.getText().toString());
-
-            TextView Text10 = findViewById(R.id.Text10);
-            user.setU10(Text10.getText().toString());
-
-
-            EditText editText10 = findViewById(R.id.editText10);
-            user.setUU10(editText10.getText().toString());
-
-            TextView Text11 = findViewById(R.id.Text11);
-            user.setU11(Text11.getText().toString());
-
-
-            EditText editText11 = findViewById(R.id.editText11);
-            user.setUU11(editText11.getText().toString());
+            //user.setU1((text));
 
 
 
-            dataSaver.saveData(user);
+            TextView Text2_1 = findViewById(R.id.Text2);
+            user.setU3((Text2_1.getText().toString()));
+            EditText editText2_2 = findViewById(R.id.editText2);
+            user.setUU3(  editText2_2.getText().toString());
+            EditText editText2_3 = findViewById(R.id.editText22);
+            user.setUUU3(  editText2_3.getText().toString());
+
+            TextView Text3_1 = findViewById(R.id.Text3);
+            user.setU4((Text3_1.getText().toString()));
+            EditText editText3_2 = findViewById(R.id.editText3);
+            user.setUU4(  editText3_2.getText().toString());
+            EditText editText3_3 = findViewById(R.id.editText33);
+            user.setUUU4(  editText3_3.getText().toString());
+
+
+            TextView Text4_1 = findViewById(R.id.Text4);
+            user.setU5((Text4_1.getText().toString()));
+            EditText editText4_2 = findViewById(R.id.editText4);
+            user.setUU5(  editText4_2.getText().toString());
+            EditText editText4_3 = findViewById(R.id.editText44);
+            user.setUUU5(  editText4_3.getText().toString());
+
+            TextView Text5_1 = findViewById(R.id.Text5);
+            user.setU6(( Text5_1.getText().toString()));
+            EditText editText5_2 = findViewById(R.id.editText5);
+            user.setUU6(  editText5_2.getText().toString());
+            EditText editText5_3 = findViewById(R.id.editText55);
+            user.setUUU6(  editText5_3.getText().toString());
+
+
+
+            dataSaver.saveData2_5(user);
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

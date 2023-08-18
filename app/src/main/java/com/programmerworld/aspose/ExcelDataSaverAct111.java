@@ -32,7 +32,7 @@ public class ExcelDataSaverAct111 {
     public void saveData1(String s1, String s2, String s3, String s4, String s5, String s6, String s7) throws Exception {
 
         // Создаем новый файл Excel с помощью Aspose.Cells
-        Workbook workbook = new Workbook("/sdcard/Download"+ "/" +outputString + "/" + outputString+ ".xlsx");
+        Workbook workbook = new Workbook();
         Worksheet worksheet = workbook.getWorksheets().get(0);
 
 
@@ -84,7 +84,7 @@ public class ExcelDataSaverAct111 {
 
         cell = worksheet.getCells().get("G2");
         cell.setValue(s7);
-         //outputString = s7.replace("/", "-");
+         outputString = s7.replace("/", "-");
         File folder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), outputString);
         if (!folder.exists()) {
             folder.mkdir();

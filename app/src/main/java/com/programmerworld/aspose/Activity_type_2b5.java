@@ -16,27 +16,27 @@ import com.aspose.cells.Worksheet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Activity_type_2b1 extends AppCompatActivity {
+public class Activity_type_2b5 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_type2b1);
+        setContentView(R.layout.activity_type2b5);
 
         findViewById(R.id.button1).setOnClickListener(v -> {
 
-                //save();
-                Intent intent = new Intent(Activity_type_2b1.this, Activity_type_2b2.class);
-                startActivity(intent);
-            //   Activity_type_2b1.this.finish();
+            //save();
+            Intent intent = new Intent(Activity_type_2b5.this, Activity_type_2b6.class);
+            startActivity(intent);
+            //  Activity_type_2b5.this.finish();
         });
         findViewById(R.id.button3).setOnClickListener(v -> {
 
             save();
 
-                Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
 
-                clearFields();
+
 
 
         });
@@ -44,10 +44,10 @@ public class Activity_type_2b1 extends AppCompatActivity {
         findViewById(R.id.button2).setOnClickListener(v -> {
 
             //save();
-                Activity_type_2b1.this.finish();
+            Activity_type_2b5.this.finish();
 
-                // Вернуться на предыдущий фрагмент
-                getSupportFragmentManager().popBackStack();
+            // Вернуться на предыдущий фрагмент
+            getSupportFragmentManager().popBackStack();
 
         });
     }
@@ -126,7 +126,7 @@ public class Activity_type_2b1 extends AppCompatActivity {
             TextView Text = findViewById(R.id.Text1);
             String text = Text.getText().toString();
 
-             //user.setU1((text));
+            //user.setU1((text));
 
             EditText editText1 = findViewById(R.id.editText1);
             String text1 = editText1.getText().toString();
@@ -180,44 +180,11 @@ public class Activity_type_2b1 extends AppCompatActivity {
 
 
 
-            TextView Text7 = findViewById(R.id.Text7);
-            user.setU7(Text7.getText().toString());
-
-
-            EditText editText7 = findViewById(R.id.editText7);
-            user.setUU7(editText7.getText().toString());
-
-            TextView Text8 = findViewById(R.id.Text8);
-            user.setU8(Text8.getText().toString());
-
-
-            EditText editText8 = findViewById(R.id.editText8);
-            user.setUU8(editText8.getText().toString());
-
-            TextView Text9 = findViewById(R.id.Text9);
-            user.setU9(Text9.getText().toString());
-
-
-            EditText editText9 = findViewById(R.id.editText9);
-            user.setUU9(editText9.getText().toString());
-
-            TextView Text10 = findViewById(R.id.Text10);
-            user.setU10(Text10.getText().toString());
-
-
-            EditText editText10 = findViewById(R.id.editText10);
-            user.setUU10(editText10.getText().toString());
-
-            TextView Text11 = findViewById(R.id.Text11);
-            user.setU11(Text11.getText().toString());
-
-
-            EditText editText11 = findViewById(R.id.editText11);
-            user.setUU11(editText11.getText().toString());
 
 
 
-            dataSaver.saveData(user);
+
+            dataSaver.saveData4(user);
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

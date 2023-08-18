@@ -1059,12 +1059,13 @@ Log.i(tag, "onCreate()");
             public void onClick(View v) {
 // Получаем выбранный элемент в Spinner
                 save1();
-                saveW();
+                //saveW();
 
                  spinner33 = findViewById(R.id.spinner3);
                 String selectedText = spinner33.getSelectedItem().toString();
                 if (selectedText.equals("Обследование сосудов и аппаратов")) {
                     Intent intent = new Intent(Activity_type_1_2.this, Activity_type_SHB1.class);
+                   // intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     startActivity(intent);
                 } else if (selectedText.equals("Обследование ТПА")) {
                    Intent intent = new Intent(Activity_type_1_2.this, MainActivity.class);

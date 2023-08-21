@@ -137,9 +137,9 @@ public class Activity_1_p2 extends AppCompatActivity {
             user.setU2((text1));
 
             TextView Text1_2 = findViewById(R.id.Text00);
-            user.setUU1( "#1_2_1_1"+Text1_2.getText().toString());
+            user.setUU1( Text1_2.getText().toString());
             EditText editText1_2 = findViewById(R.id.editText1);
-            user.setUU2( "#1_2_1_1"+ editText1_2.getText().toString());
+            user.setUU2(  editText1_2.getText().toString());
 
             TextView Text1_3 = findViewById(R.id.Text000);
             user.setUUU1( Text1_3.getText().toString());
@@ -184,7 +184,7 @@ public class Activity_1_p2 extends AppCompatActivity {
 
 
 
-            dataSaver.saveData2_5(user);
+            dataSaver.saveData2_5_2pr(user);
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

@@ -7,7 +7,7 @@
     tools:ignore="MissingDefaultResource"
 
     android:paddingBottom="0dp"
-    android:name=".activity_1_p1">
+    android:name=".activity_type_sos4pr2">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -22,8 +22,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Протокол по результатам оперативной (функциональной) диагностики
-
+                android:text="Протокол по результатам ультразвуковой толщинометрии
+  3. Параметры контроля
  "
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@android:color/white" />
@@ -45,10 +45,33 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Text0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+
+                        android:background="#E8D952"
+                        android:gravity="center"
+                        android:text="Внимание!!! Если вы проводите несколько контролев заполните данный экран несколько раз." />
 
 
 
+                </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -69,7 +92,7 @@
                         android:layout_weight="50"
 
                         android:gravity="center"
-                        android:text="№" />
+                        android:text="Наименование прибора" />
 
                     <EditText
                         android:id="@+id/editText1"
@@ -79,57 +102,11 @@
 
                         android:gravity="center"
                         android:hint="Введите текст здесь"/>
-                    <TextView
-                        android:id="@+id/Text2"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="50"
-
-                        android:gravity="center"
-                        android:text="от" />
-
-                    <EditText
-                        android:id="@+id/editText2"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="50"
-
-                        android:gravity="center"
-                        android:hint="Введите текст здесь"/>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                app:cardUseCompatPadding="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/Text0"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="50"
-
-                        android:background="#FFFFFF"
-                        android:gravity="center"
-                        android:text=" Нормативно-техническая документация, в соответствии с которой выполнен контроль
-" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -142,10 +119,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <TextView
+                        android:id="@+id/Text2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
 
+                        android:gravity="center"
+                        android:text=" Заводской номер прибора"/>
 
                     <EditText
-                        android:id="@+id/editText3"
+                        android:id="@+id/editText2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="50"
@@ -153,9 +137,13 @@
                         android:gravity="center"
                         android:hint="Введите текст здесь"/>
 
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+
+
 
 
         </LinearLayout>

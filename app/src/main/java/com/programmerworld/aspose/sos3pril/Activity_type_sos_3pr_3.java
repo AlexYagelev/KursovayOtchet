@@ -1,4 +1,6 @@
-package com.programmerworld.aspose;
+
+
+package com.programmerworld.aspose.sos3pril;
 
 
 import android.content.Intent;
@@ -12,23 +14,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.aspose.cells.Cell;
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
+import com.programmerworld.aspose.Activity_type_SHB1;
+import com.programmerworld.aspose.ExcelDataSaverAct21d;
+import com.programmerworld.aspose.R;
+import com.programmerworld.aspose.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Activity_1_p1 extends AppCompatActivity {
+public class Activity_type_sos_3pr_3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity1_p1);
+        setContentView(R.layout.activity_type_sos3pr3);
 
         findViewById(R.id.button1).setOnClickListener(v -> {
 
             //save();
-            Intent intent = new Intent(Activity_1_p1.this, Activity_1_p2.class);
+            Intent intent = new Intent(Activity_type_sos_3pr_3.this, Activity_type_SHB1.class);
             startActivity(intent);
-            // Activity_type_2b4.this.finish();
+            //   Activity_type_2b2.this.finish();
         });
         findViewById(R.id.button3).setOnClickListener(v -> {
 
@@ -44,7 +50,7 @@ public class Activity_1_p1 extends AppCompatActivity {
         findViewById(R.id.button2).setOnClickListener(v -> {
 
             //save();
-            Activity_1_p1.this.finish();
+            Activity_type_sos_3pr_3.this.finish();
 
             // Вернуться на предыдущий фрагмент
             getSupportFragmentManager().popBackStack();
@@ -124,7 +130,7 @@ public class Activity_1_p1 extends AppCompatActivity {
 
 
             TextView Text = findViewById(R.id.Text1);
-            String text = Text.getText().toString() ;
+            String text = Text.getText().toString();
 
             //user.setU1((text));
 
@@ -146,8 +152,9 @@ public class Activity_1_p1 extends AppCompatActivity {
             String text3 = editText2.getText().toString();
             user.setUU2((text3));
 
-            TextView Text3 =findViewById(R.id.Text0);
-            String text5 =  Text3.getText().toString();
+
+            TextView Text3 = findViewById(R.id.Text3);
+            String text5 = Text3.getText().toString();
             user.setU3((text5));
 
 
@@ -155,12 +162,16 @@ public class Activity_1_p1 extends AppCompatActivity {
             String text6 = editText3.getText().toString();
             user.setUU3(String.valueOf(text6));
 
+            TextView Text4 = findViewById(R.id.Text4);
+            user.setU4(Text4.getText().toString());
+
+
+            EditText editText4 = findViewById(R.id.editText4);
+            user.setUU4(editText4.getText().toString());
 
 
 
-
-
-            dataSaver.saveData2_3_2pr(user);
+            dataSaver.saveData2_4_3pr(user);
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

@@ -24,6 +24,24 @@
         android:theme="@style/Theme.Aspose"
         tools:targetApi="31">
         <activity
+            android:name=".sos7pril.Activity_type_sos_7pr_3"
+            android:exported="false" />
+        <activity
+            android:name=".sos6pril.Activity_type_sos_6pr_3"
+            android:exported="false" />
+        <activity
+            android:name=".sos6pril.Activity_type_sos_6pr_2"
+            android:exported="false" />
+        <activity
+            android:name=".sos5pril.Activity_type_sos_5pr_3"
+            android:exported="false" />
+        <activity
+            android:name=".sos7pril.Activity_type_sos_7pr_2"
+            android:exported="false" />
+        <activity
+            android:name=".sos7pril.Activity_type_sos_7pr_1"
+            android:exported="false" />
+        <activity
             android:name=".sos6pril.Activity_type_sos_6pr_1"
             android:exported="false" />
         <activity

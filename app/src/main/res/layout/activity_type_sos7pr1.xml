@@ -7,7 +7,7 @@
     tools:ignore="MissingDefaultResource"
 
     android:paddingBottom="0dp"
-    android:name=".activity_type_sos5pr1">
+    android:name=".activity_type_sos7pr1">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -22,7 +22,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=" Протокол по результатам контроля твердости основного металла и сварных соединений    2. Применяемое оборудование  "
+                android:text="Протокол по результатам магнитопорошкового контроля элементов сосуда
+    2. Применяемое оборудование  "
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@android:color/white" />
 

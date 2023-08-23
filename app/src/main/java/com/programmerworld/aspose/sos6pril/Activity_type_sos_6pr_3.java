@@ -1,6 +1,4 @@
-
-
-package com.programmerworld.aspose.sos3pril;
+package com.programmerworld.aspose.sos6pril;
 
 
 import android.content.Intent;
@@ -11,31 +9,25 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.aspose.cells.Cell;
-import com.aspose.cells.Workbook;
-import com.aspose.cells.Worksheet;
-import com.programmerworld.aspose.Activity_type_SHB1;
+import com.programmerworld.aspose.Activity_type_2b4;
 import com.programmerworld.aspose.ExcelDataSaverAct111;
 import com.programmerworld.aspose.ExcelDataSaverAct21d;
 import com.programmerworld.aspose.R;
 import com.programmerworld.aspose.User;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Activity_type_sos_3pr_3 extends AppCompatActivity {
+public class Activity_type_sos_6pr_3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_type_sos3pr3);
+        setContentView(R.layout.activity_type_sos6pr3);
 
         findViewById(R.id.button1).setOnClickListener(v -> {
 
             //save();
-            Intent intent = new Intent(Activity_type_sos_3pr_3.this, Activity_type_SHB1.class);
+            Intent intent = new Intent(Activity_type_sos_6pr_3.this, Activity_type_2b4.class);
             startActivity(intent);
-            //   Activity_type_2b2.this.finish();
+            // Activity_type_2b3.this.finish();
         });
         findViewById(R.id.button3).setOnClickListener(v -> {
 
@@ -51,7 +43,7 @@ public class Activity_type_sos_3pr_3 extends AppCompatActivity {
         findViewById(R.id.button2).setOnClickListener(v -> {
 
             //save();
-            Activity_type_sos_3pr_3.this.finish();
+            Activity_type_sos_6pr_3.this.finish();
 
             // Вернуться на предыдущий фрагмент
             getSupportFragmentManager().popBackStack();
@@ -94,37 +86,6 @@ public class Activity_type_sos_3pr_3 extends AppCompatActivity {
     }
 
 
-
-    private List<List<String>> loadDataFromExcel3() throws Exception {
-        // Загрузка данных из Excel с помощью Aspose.Cells
-
-        Workbook workbook = new Workbook("/sdcard/Download/Книга1.xlsx");
-
-        // Получаем первый лист
-        Worksheet worksheet = workbook.getWorksheets().get(0);
-
-        // Создадим список для данных
-        List<List<String>> data = new ArrayList<>();
-
-        // Проходим по всем строкам
-        for (int rowIndex = 0; rowIndex < worksheet.getCells().getMaxDataRow()+1; rowIndex++) {
-            // Данные из одной строки
-            List<String> rowData = new ArrayList<>();
-
-            // Проходим по всем ячейкам в строке
-            for (int colIndex = 0; colIndex < worksheet.getCells().getMaxDataColumn()+1; colIndex++) {
-                Cell cell = worksheet.getCells().get(rowIndex, colIndex);
-
-                // Добавляем данные ячейки в список строки
-                rowData.add(cell.getStringValue());
-            }
-            // Добавляем список данных строки в общий список
-            data.add(rowData);
-        }    return data;
-    }
-
-
-
     private void save(){
         ExcelDataSaverAct21d dataSaver = new ExcelDataSaverAct21d("/sdcard/Download" + "/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString + ".xlsx");
         try {
@@ -153,7 +114,6 @@ public class Activity_type_sos_3pr_3 extends AppCompatActivity {
             String text3 = editText2.getText().toString();
             user.setUU2((text3));
 
-
             TextView Text3 = findViewById(R.id.Text3);
             String text5 = Text3.getText().toString();
             user.setU3((text5));
@@ -170,9 +130,42 @@ public class Activity_type_sos_3pr_3 extends AppCompatActivity {
             EditText editText4 = findViewById(R.id.editText4);
             user.setUU4(editText4.getText().toString());
 
+            TextView Text5 = findViewById(R.id.Text5);
+            user.setU5(Text5.getText().toString());
 
 
-            dataSaver.saveData2_4_3pr(user);
+            EditText editText5 = findViewById(R.id.editText5);
+            user.setUU5(editText5.getText().toString());
+
+            TextView Text6 = findViewById(R.id.Text6);
+            user.setU6(Text6.getText().toString());
+
+
+            EditText editText6 = findViewById(R.id.editText6);
+            user.setUU6(editText6.getText().toString());
+
+// Вставить значение в первую ячейку
+
+
+
+            TextView Text7 = findViewById(R.id.Text7);
+            user.setU7(Text7.getText().toString());
+
+
+            EditText editText7 = findViewById(R.id.editText7);
+            user.setUU7(editText7.getText().toString());
+
+            TextView Text8 = findViewById(R.id.Text8);
+            user.setU8(Text8.getText().toString());
+
+
+            EditText editText8 = findViewById(R.id.editText8);
+            user.setUU8(editText8.getText().toString());
+
+
+
+
+            dataSaver.saveData1_6pr(user);
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

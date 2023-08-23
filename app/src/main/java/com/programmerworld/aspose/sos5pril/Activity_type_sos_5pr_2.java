@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.aspose.cells.Cell;
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
+import com.programmerworld.aspose.Activity_type_SHB1;
+import com.programmerworld.aspose.ExcelDataSaverAct111;
 import com.programmerworld.aspose.ExcelDataSaverAct21d;
 import com.programmerworld.aspose.R;
 import com.programmerworld.aspose.User;
@@ -33,7 +35,7 @@ public class Activity_type_sos_5pr_2 extends AppCompatActivity {
         findViewById(R.id.button1).setOnClickListener(v -> {
 
             //save();
-            Intent intent = new Intent(com.programmerworld.aspose.sos5pril.Activity_type_sos_5pr_2.this, Activity_type_sos_4pr_2.class);
+            Intent intent = new Intent(com.programmerworld.aspose.sos5pril.Activity_type_sos_5pr_2.this, Activity_type_SHB1.class);
             startActivity(intent);
             //   Activity_type_2b1.this.finish();
         });
@@ -98,7 +100,7 @@ public class Activity_type_sos_5pr_2 extends AppCompatActivity {
     private List<List<String>> loadDataFromExcel3() throws Exception {
         // Загрузка данных из Excel с помощью Aspose.Cells
 
-        Workbook workbook = new Workbook("/sdcard/Download/Книга1.xlsx");
+        Workbook workbook = new Workbook("/sdcard/Download" + "/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString + ".xlsx");
 
         // Получаем первый лист
         Worksheet worksheet = workbook.getWorksheets().get(0);

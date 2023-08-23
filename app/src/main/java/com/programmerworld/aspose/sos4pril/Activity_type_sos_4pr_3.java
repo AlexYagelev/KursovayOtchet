@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.programmerworld.aspose.Activity_type_SHB1;
+import com.programmerworld.aspose.ExcelDataSaverAct111;
 import com.programmerworld.aspose.ExcelDataSaverAct21d;
 import com.programmerworld.aspose.R;
 import com.programmerworld.aspose.User;
@@ -92,7 +93,7 @@ public class Activity_type_sos_4pr_3 extends AppCompatActivity {
 
 
     private void save(){
-        ExcelDataSaverAct21d dataSaver = new ExcelDataSaverAct21d("example.xlsx");
+        ExcelDataSaverAct21d dataSaver = new ExcelDataSaverAct21d("/sdcard/Download" + "/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString + ".xlsx");
         try {
 
 

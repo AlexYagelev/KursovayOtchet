@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.aspose.cells.Cell;
 import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
+import com.programmerworld.aspose.ExcelDataSaverAct111;
 import com.programmerworld.aspose.ExcelDataSaverAct21d;
 import com.programmerworld.aspose.R;
 import com.programmerworld.aspose.User;
@@ -125,7 +126,7 @@ public class Activity_type_sos_4pr_1 extends AppCompatActivity {
 
 
     private void save(){
-        ExcelDataSaverAct21d dataSaver = new ExcelDataSaverAct21d("example.xlsx");
+        ExcelDataSaverAct21d dataSaver = new ExcelDataSaverAct21d("/sdcard/Download" + "/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString + ".xlsx");
         try {
 
 

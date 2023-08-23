@@ -390,12 +390,13 @@
                 <Button
                     android:id="@+id/btnPermission"
                     android:layout_width="0dp"
+                    android:layout_height="50dp"
+
+                    android:layout_weight="50"
                     android:gravity="center"
 
-                    android:layout_height="50dp"
-                    android:layout_weight="50"
-
-                    android:text="Запросить разрешение" />
+                    android:text="Запросить разрешение"
+                    android:textColorHighlight="#0079C2" />
             <TextView
                 android:id="@+id/tvPermission"
                 android:layout_width="0dp"

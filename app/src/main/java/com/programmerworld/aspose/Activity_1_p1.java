@@ -162,7 +162,9 @@ public class Activity_1_p1 extends AppCompatActivity {
 
             dataSaver.saveData2_3_2pr(user);
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
+            clearFields();
+        }
+        catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(this, "Ошибка при сохранении данных", Toast.LENGTH_SHORT).show();
         }

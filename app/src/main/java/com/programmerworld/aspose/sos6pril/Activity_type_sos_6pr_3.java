@@ -165,7 +165,7 @@ public class Activity_type_sos_6pr_3 extends AppCompatActivity {
 
 
 
-            dataSaver.saveData1_6pr(user);
+            dataSaver.saveData1_6pr(user);clearFields();
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

@@ -33,7 +33,7 @@ public class Activity_type_sos_4pr_2 extends AppCompatActivity {
         findViewById(R.id.button1).setOnClickListener(v -> {
 
             //save();
-            Intent intent = new Intent(com.programmerworld.aspose.sos4pril.Activity_type_sos_4pr_2.this, Activity_type_sos_4pr_2.class);
+            Intent intent = new Intent(com.programmerworld.aspose.sos4pril.Activity_type_sos_4pr_2.this, Activity_type_sos_4pr_3.class);
             startActivity(intent);
             //   Activity_type_2b1.this.finish();
         });
@@ -156,7 +156,7 @@ public class Activity_type_sos_4pr_2 extends AppCompatActivity {
 
 
 
-            dataSaver.saveData2_2_4pr(user);
+            dataSaver.saveData2_2_4pr(user);clearFields();
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

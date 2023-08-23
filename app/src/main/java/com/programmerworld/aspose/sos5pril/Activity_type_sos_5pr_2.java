@@ -20,7 +20,6 @@ import com.programmerworld.aspose.ExcelDataSaverAct111;
 import com.programmerworld.aspose.ExcelDataSaverAct21d;
 import com.programmerworld.aspose.R;
 import com.programmerworld.aspose.User;
-import com.programmerworld.aspose.sos4pril.Activity_type_sos_4pr_2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -158,7 +157,7 @@ public class Activity_type_sos_5pr_2 extends AppCompatActivity {
 
 
 
-            dataSaver.saveData2_2_5pr(user);
+            dataSaver.saveData2_2_5pr(user);clearFields();
             Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

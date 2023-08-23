@@ -126,6 +126,9 @@ public class Activity_type_sos_7pr_2 extends AppCompatActivity {
 
 
 
+
+
+
     private void save(){
         ExcelDataSaverAct21d dataSaver = new ExcelDataSaverAct21d("/sdcard/Download" + "/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString + ".xlsx");
         try {
@@ -157,8 +160,7 @@ public class Activity_type_sos_7pr_2 extends AppCompatActivity {
 
 
 
-            dataSaver.saveData2_2_7pr(user);
-            Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
+            dataSaver.saveData2_2_7pr(user);clearFields() ;Toast.makeText(this, "Данные сохранены успешно", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(this, "Ошибка при сохранении данных", Toast.LENGTH_SHORT).show();

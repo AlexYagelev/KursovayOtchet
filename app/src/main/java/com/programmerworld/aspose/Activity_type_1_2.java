@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -73,7 +74,11 @@ private String tag = "Жизненный цикл";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ak);
-Log.i(tag, "onCreate()");
+btnPermission = findViewById(R.id.btnPermission);
+        btnPermission.setBackgroundColor(Color.parseColor("#0079C2"));
+
+
+        Log.i(tag, "onCreate()");
         View rootView = getWindow().getDecorView().getRootView();
         rootView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -1042,6 +1047,7 @@ Log.i(tag, "onCreate()");
 // Если выбран не первый элемент, то разблокируем кнопку
                 if (position != 0) {
                     button2.setEnabled(true);
+                    findViewById(R.id.button2).setBackgroundColor(Color.parseColor("#0079C2"));
                 } else {
                     button2.setEnabled(false);
                 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Activity_type_2_sosudi1"
+    tools:context=".sosudi.Activity_type_2_sosudi1"
     tools:ignore="MissingDefaultResource">
 
     <com.google.android.material.appbar.AppBarLayout

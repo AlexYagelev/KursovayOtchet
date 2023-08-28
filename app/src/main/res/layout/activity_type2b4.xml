@@ -284,7 +284,11 @@
         android:gravity="center"
         app:fabCradleMargin="8dp">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            app:titleTextColor="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:background="#0079C2"
+            android:layout_margin="8dp"
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -294,7 +298,11 @@
 
             tools:ignore="MissingConstraints" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            app:titleTextColor="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:background="#0079C2"
+            android:layout_margin="8dp"
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -305,7 +313,11 @@
 
             />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            app:titleTextColor="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:background="#0079C2"
+            android:layout_margin="8dp"
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

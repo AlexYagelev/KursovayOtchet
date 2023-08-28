@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Activity_type_2_sosudi1"
+    tools:context=".sosudi.Activity_type_2_sosudi1"
     tools:ignore="MissingDefaultResource"
     android:paddingBottom="0dp"
    >
@@ -387,16 +387,19 @@
                 android:orientation="horizontal">
 
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnPermission"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-
                     android:layout_weight="50"
-                    android:gravity="center"
+                    android:background="#0079C2"
+                    android:backgroundTint="#0079C2"
 
+                    android:gravity="center"
                     android:text="Запросить разрешение"
-                    android:textColorHighlight="#0079C2" />
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
             <TextView
                 android:id="@+id/tvPermission"
                 android:layout_width="0dp"
@@ -427,14 +430,14 @@
         android:layout_gravity="bottom"
         app:fabCradleRoundedCornerRadius="50dp"
         app:fabCradleMargin="8dp">
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button2"
             android:layout_width="88dp"
             android:layout_height="80dp"
 
             android:enabled="false"
             android:text="»"
-
+            android:textColor="#FFFFFF"
             tools:ignore="MissingConstraints" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 

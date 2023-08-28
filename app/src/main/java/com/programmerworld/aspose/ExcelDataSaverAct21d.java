@@ -1058,6 +1058,202 @@ public class ExcelDataSaverAct21d extends ViewModel {
         workbook.save(outputFile, SaveFormat.XLSX);
     }
 
+    public void saveData2_10_TPA_1(User user) throws Exception { Workbook workbook = new Workbook("/sdcard/Download" + "/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString + ".xlsx");
+        Worksheet worksheet = workbook.getWorksheets().get(0);
+
+        int  count = worksheet.getCells().getMaxDataColumn()+1;
+
+
+// Заполняем таблицу данными
+        if(!user.getUU2().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU2().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU2().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU2().toString());
+            ++count;
+        }
+
+
+        if(!user.getUU3().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU3().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU3().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU3().toString());
+            ++count;
+        }
+
+        if(!user.getUU4().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU4().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU4().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU4().toString());
+            ++count;
+        }
+
+        if(!user.getUU5().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU5().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU5().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU5().toString());
+            ++count;
+        }
+
+
+        if(!user.getUU6().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU6().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU6().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU6().toString());
+            ++count;
+        }
+
+        if(!user.getUU7().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU7().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU7().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU7().toString());
+            ++count;
+        }
+
+
+        if(!user.getUU8().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU8().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU8().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU8().toString());
+            ++count;
+        }
+
+        if(!user.getUU9().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU9().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU9().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU9().toString());
+            ++count;
+        }
+        if(!user.getUU10().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU10().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU10().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU10().toString());
+            ++count;
+        }
+        if(!user.getUU11().isEmpty()) {
+            Cell cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getU1()).toString());
+            Cell cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getU11().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUU11().toString());
+            ++count;
+            cell11 = worksheet.getCells().get(0,count);
+            cell11.setValue((user.getUUU1()).toString());
+            cell12 = worksheet.getCells().get(1, count);
+            cell12.setValue(user.getUUU11().toString());
+            ++count;
+        }
+
+
+
+// Сохраняем файл Exc
+        String outputDirectory = "/sdcard/Download"; // Место для сохранения файла
+        String outputFile = outputDirectory + "/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString + ".xlsx";
+        workbook.save(outputFile, SaveFormat.XLSX);
+    }
+
 
     public void saveData2_5_2pr(User user) throws Exception { Workbook workbook = new Workbook("/sdcard/Download" + "/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString + ".xlsx");
         Worksheet worksheet = workbook.getWorksheets().get(0);
@@ -1278,6 +1474,10 @@ public class ExcelDataSaverAct21d extends ViewModel {
         String outputDirectory = "/sdcard/Download"; // Место для сохранения файла
         String outputFile = outputDirectory + "/" + ExcelDataSaverAct111.outputString + "/" + ExcelDataSaverAct111.outputString + ".xlsx";
         workbook.save(outputFile, SaveFormat.XLSX);
+    }
+
+    public void close() {
+
     }
 }
 

@@ -24,79 +24,101 @@
         android:theme="@style/Theme.Aspose"
         tools:targetApi="31">
         <activity
-            android:name=".sos7pril.Activity_type_sos_7pr_3"
+            android:name=".TPA.pr1.path2"
             android:exported="false" />
         <activity
-            android:name=".sos6pril.Activity_type_sos_6pr_3"
+            android:name=".TPA.pr1.path1"
             android:exported="false" />
         <activity
-            android:name=".sos6pril.Activity_type_sos_6pr_2"
+            android:name=".TPA.TPA_shb"
             android:exported="false" />
         <activity
-            android:name=".sos5pril.Activity_type_sos_5pr_3"
+            android:name=".TPA.TPA_1pr_1"
             android:exported="false" />
         <activity
-            android:name=".sos7pril.Activity_type_sos_7pr_2"
+            android:name=".Splash_Screen"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".sosudi.sos7pril.Activity_type_sos_7pr_3"
             android:exported="false" />
         <activity
-            android:name=".sos7pril.Activity_type_sos_7pr_1"
+            android:name=".sosudi.sos6pril.Activity_type_sos_6pr_3"
             android:exported="false" />
         <activity
-            android:name=".sos6pril.Activity_type_sos_6pr_1"
+            android:name=".sosudi.sos6pril.Activity_type_sos_6pr_2"
             android:exported="false" />
         <activity
-            android:name=".sos5pril.Activity_type_sos_5pr_2"
+            android:name=".sosudi.sos5pril.Activity_type_sos_5pr_3"
             android:exported="false" />
         <activity
-            android:name=".sos5pril.Activity_type_sos_5pr_1"
+            android:name=".sosudi.sos7pril.Activity_type_sos_7pr_2"
             android:exported="false" />
         <activity
-            android:name=".sos4pril.Activity_type_sos_4pr_3"
+            android:name=".sosudi.sos7pril.Activity_type_sos_7pr_1"
             android:exported="false" />
         <activity
-            android:name=".sos4pril.Activity_type_sos_4pr_2"
+            android:name=".sosudi.sos6pril.Activity_type_sos_6pr_1"
             android:exported="false" />
         <activity
-            android:name=".sos4pril.Activity_type_sos_4pr_1"
+            android:name=".sosudi.sos5pril.Activity_type_sos_5pr_2"
             android:exported="false" />
         <activity
-            android:name=".sos3pril.Activity_type_sos_3pr_3"
+            android:name=".sosudi.sos5pril.Activity_type_sos_5pr_1"
             android:exported="false" />
         <activity
-            android:name=".sos3pril.Activity_type_sos_3pr_2"
+            android:name=".sosudi.sos4pril.Activity_type_sos_4pr_3"
             android:exported="false" />
         <activity
-            android:name=".sos3pril.Activity_type_sos_3pr_1"
+            android:name=".sosudi.sos4pril.Activity_type_sos_4pr_2"
             android:exported="false" />
         <activity
-            android:name=".Activity_1_p1_1"
+            android:name=".sosudi.sos4pril.Activity_type_sos_4pr_1"
             android:exported="false" />
         <activity
-            android:name=".Activity_1_p2"
+            android:name=".sosudi.sos3pril.Activity_type_sos_3pr_3"
             android:exported="false" />
         <activity
-            android:name=".Activity_1_p1"
+            android:name=".sosudi.sos3pril.Activity_type_sos_3pr_2"
             android:exported="false" />
         <activity
-            android:name=".Activity_type_2b8"
+            android:name=".sosudi.sos3pril.Activity_type_sos_3pr_1"
             android:exported="false" />
         <activity
-            android:name=".Activity_type_2b7"
+            android:name=".sosudi.Activity_1_p1_1"
             android:exported="false" />
         <activity
-            android:name=".Activity_type_2b6"
+            android:name=".sosudi.Activity_1_p2"
             android:exported="false" />
         <activity
-            android:name=".Activity_type_2b5"
+            android:name=".sosudi.Activity_1_p1"
             android:exported="false" />
         <activity
-            android:name=".Activity_type_2b4"
+            android:name=".sosudi.Activity_type_2b8"
             android:exported="false" />
         <activity
-            android:name=".Activity_type_2b3"
+            android:name=".sosudi.Activity_type_2b7"
             android:exported="false" />
         <activity
-            android:name=".Activity_type_2b2"
+            android:name=".sosudi.Activity_type_2b6"
+            android:exported="false" />
+        <activity
+            android:name=".sosudi.Activity_type_2b5"
+            android:exported="false" />
+        <activity
+            android:name=".sosudi.Activity_type_2b4"
+            android:exported="false" />
+        <activity
+            android:name=".sosudi.Activity_type_2b3"
+            android:exported="false" />
+        <activity
+            android:name=".sosudi.Activity_type_2b2"
             android:exported="false" />
         <activity
             android:name=".comp"
@@ -113,17 +135,17 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activity_type_2b1"
+            android:name=".sosudi.Activity_type_2b1"
             android:exported="false" />
         <activity
-            android:name=".Activity_type_2b"
+            android:name=".sosudi.Activity_type_2b"
             android:exported="false" />
         <activity
-            android:name=".Activity_type_2_sosudi1"
+            android:name=".sosudi.Activity_type_2_sosudi1"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activity_type_2_sosudi"
+            android:name=".sosudi.Activity_type_2_sosudi"
             android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
@@ -132,18 +154,12 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activity_type_1_2"
+            android:name=".sosudi.Activity_type_1_2"
             android:configChanges="orientation|screenSize"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activity_type_1_1"
+            android:name=".sosudi.Activity_type_1_1"
             android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
@@ -152,7 +168,7 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activity_type_1"
+            android:name=".sosudi.Activity_type_1"
             android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity

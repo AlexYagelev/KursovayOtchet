@@ -11,11 +11,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.programmerworld.aspose.sos3pril.Activity_type_sos_3pr_1;
-import com.programmerworld.aspose.sos4pril.Activity_type_sos_4pr_1;
-import com.programmerworld.aspose.sos5pril.Activity_type_sos_5pr_1;
-import com.programmerworld.aspose.sos6pril.Activity_type_sos_6pr_1;
-import com.programmerworld.aspose.sos7pril.Activity_type_sos_7pr_1;
+import com.programmerworld.aspose.sosudi.Activity_1_p1;
+import com.programmerworld.aspose.sosudi.sos3pril.Activity_type_sos_3pr_1;
+import com.programmerworld.aspose.sosudi.sos4pril.Activity_type_sos_4pr_1;
+import com.programmerworld.aspose.sosudi.sos5pril.Activity_type_sos_5pr_1;
+import com.programmerworld.aspose.sosudi.sos6pril.Activity_type_sos_6pr_1;
+import com.programmerworld.aspose.sosudi.sos7pril.Activity_type_sos_7pr_1;
 
 import java.io.File;
 import java.io.FileOutputStream;
